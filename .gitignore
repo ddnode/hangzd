@@ -1,0 +1,9 @@
+ldpath
+.project
+.settings
+
+sites/default/settings.php
+sites/default/css
+sites/default/js
+sites/default/files
+cache/
