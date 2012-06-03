@@ -1,0 +1,1 @@
+Drupal.locale = { 'pluralFormula': function($n) { return Number(($n!=1)); }, 'strings': { "Unspecified error": "未知错误", "Join summary": "合并摘要", "Split summary at cursor": "在光标处截断摘要", "Automatic alias": "自动别名", "Alias: @alias": "别名：@alias", "No alias": "无别名" } };
