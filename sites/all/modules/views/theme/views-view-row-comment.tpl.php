@@ -14,4 +14,4 @@
  * @ingroup views_templates
  */
 ?>
-<?php print $comment; ?>
+<?php echo $comment; ?>

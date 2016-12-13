@@ -12,7 +12,7 @@
     <div class="t-edge"><div class="l"></div><div class="r"></div></div>
     <div class="l-edge">
       <div class="r-edge clear-block">
-        <?php print $content; ?>
+        <?php echo $content; ?>
       </div>
     </div>
     <div class="b-edge"><div class="l"></div><div class="r"></div></div>

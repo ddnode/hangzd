@@ -23,57 +23,57 @@
 ?>
 
 <div id="site-map">
-  <?php if($message): ?>
+  <?php if ($message): ?>
     <div class="site-map-message">
-      <?php print $message; ?>
+      <?php echo $message; ?>
     </div>
   <?php endif; ?>
 
-  <?php if($rss_legend): ?>
+  <?php if ($rss_legend): ?>
     <div class="site-map-rss-legend">
-      <?php print $rss_legend; ?>
+      <?php echo $rss_legend; ?>
     </div>
   <?php endif; ?>
 
-  <?php if($front_page): ?>
+  <?php if ($front_page): ?>
     <div class="site-map-front-page">
-      <?php print $front_page; ?>
+      <?php echo $front_page; ?>
     </div>
   <?php endif; ?>
 
-  <?php if($blogs): ?>
+  <?php if ($blogs): ?>
     <div class="site-map-blogs">
-      <?php print $blogs; ?>
+      <?php echo $blogs; ?>
     </div>
   <?php endif; ?>
 
-  <?php if($books): ?>
+  <?php if ($books): ?>
     <div class="site-map-books">
-      <?php print $books; ?>
+      <?php echo $books; ?>
     </div>
   <?php endif; ?>
 
-  <?php if($menus): ?>
+  <?php if ($menus): ?>
     <div class="site-map-menus">
-      <?php print $menus; ?>
+      <?php echo $menus; ?>
     </div>
   <?php endif; ?>
 
-  <?php if($faq): ?>
+  <?php if ($faq): ?>
     <div class="site-map-faq">
-      <?php print $faq; ?>
+      <?php echo $faq; ?>
     </div>
   <?php endif; ?>
 
-  <?php if($taxonomys): ?>
+  <?php if ($taxonomys): ?>
     <div class="site-map-taxonomys">
-      <?php print $taxonomys; ?>
+      <?php echo $taxonomys; ?>
     </div>
   <?php endif; ?>
 
-  <?php if($additional): ?>
+  <?php if ($additional): ?>
     <div class="site-map-additional">
-      <?php print $additional; ?>
+      <?php echo $additional; ?>
     </div>
   <?php endif; ?>
 </div>

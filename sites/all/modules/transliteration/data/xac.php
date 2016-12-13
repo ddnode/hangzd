@@ -1,7 +1,8 @@
 <?php
+
 // $Id: xac.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'ga', 'gag', 'gagg', 'gags', 'gan', 'ganj', 'ganh', 'gad', 'gal', 'galg', 'galm', 'galb', 'gals', 'galt', 'galp', 'galh',
   0x10 => 'gam', 'gab', 'gabs', 'gas', 'gass', 'gang', 'gaj', 'gac', 'gak', 'gat', 'gap', 'gah', 'gae', 'gaeg', 'gaegg', 'gaegs',
   0x20 => 'gaen', 'gaenj', 'gaenh', 'gaed', 'gael', 'gaelg', 'gaelm', 'gaelb', 'gaels', 'gaelt', 'gaelp', 'gaelh', 'gaem', 'gaeb', 'gaebs', 'gaes',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'gyels', 'gyelt', 'gyelp', 'gyelh', 'gyem', 'gyeb', 'gyebs', 'gyes', 'gyess', 'gyeng', 'gyej', 'gyec', 'gyek', 'gyet', 'gyep', 'gyeh',
   0xE0 => 'go', 'gog', 'gogg', 'gogs', 'gon', 'gonj', 'gonh', 'god', 'gol', 'golg', 'golm', 'golb', 'gols', 'golt', 'golp', 'golh',
   0xF0 => 'gom', 'gob', 'gobs', 'gos', 'goss', 'gong', 'goj', 'goc', 'gok', 'got', 'gop', 'goh', 'gwa', 'gwag', 'gwagg', 'gwags',
-);
+];

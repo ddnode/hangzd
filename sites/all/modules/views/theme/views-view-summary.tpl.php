@@ -9,9 +9,9 @@
 <div class="item-list">
   <ul class="views-summary">
   <?php foreach ($rows as $id => $row): ?>
-    <li><a href="<?php print $row->url; ?>"<?php print !empty($classes[$id]) ? ' class="'. $classes[$id] .'"' : ''; ?>><?php print $row->link; ?></a>
+    <li><a href="<?php echo $row->url; ?>"<?php echo !empty($classes[$id]) ? ' class="'.$classes[$id].'"' : ''; ?>><?php echo $row->link; ?></a>
       <?php if (!empty($options['count'])): ?>
-        (<?php print $row->count?>)
+        (<?php echo $row->count?>)
       <?php endif; ?>
     </li>
   <?php endforeach; ?>

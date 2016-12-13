@@ -20,5 +20,5 @@
  */
 ?>
 <div id="profile">
-  <?php print $content; ?>
+  <?php echo $content; ?>
 </div>

@@ -1,3 +1,3 @@
-<div<?php print drupal_attributes($attributes); ?>>
-  <?php print $rendered_field_items; ?>
+<div<?php echo drupal_attributes($attributes); ?>>
+  <?php echo $rendered_field_items; ?>
 </div>

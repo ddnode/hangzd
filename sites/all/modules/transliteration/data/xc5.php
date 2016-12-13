@@ -1,7 +1,8 @@
 <?php
+
 // $Id: xc5.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'sseum', 'sseub', 'sseubs', 'sseus', 'sseuss', 'sseung', 'sseuj', 'sseuc', 'sseuk', 'sseut', 'sseup', 'sseuh', 'ssyi', 'ssyig', 'ssyigg', 'ssyigs',
   0x10 => 'ssyin', 'ssyinj', 'ssyinh', 'ssyid', 'ssyil', 'ssyilg', 'ssyilm', 'ssyilb', 'ssyils', 'ssyilt', 'ssyilp', 'ssyilh', 'ssyim', 'ssyib', 'ssyibs', 'ssyis',
   0x20 => 'ssyiss', 'ssying', 'ssyij', 'ssyic', 'ssyik', 'ssyit', 'ssyip', 'ssyih', 'ssi', 'ssig', 'ssigg', 'ssigs', 'ssin', 'ssinj', 'ssinh', 'ssid',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'e', 'eg', 'egg', 'egs', 'en', 'enj', 'enh', 'ed', 'el', 'elg', 'elm', 'elb', 'els', 'elt', 'elp', 'elh',
   0xE0 => 'em', 'eb', 'ebs', 'es', 'ess', 'eng', 'ej', 'ec', 'ek', 'et', 'ep', 'eh', 'yeo', 'yeog', 'yeogg', 'yeogs',
   0xF0 => 'yeon', 'yeonj', 'yeonh', 'yeod', 'yeol', 'yeolg', 'yeolm', 'yeolb', 'yeols', 'yeolt', 'yeolp', 'yeolh', 'yeom', 'yeob', 'yeobs', 'yeos',
-);
+];

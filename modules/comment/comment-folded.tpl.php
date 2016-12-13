@@ -16,5 +16,5 @@
  */
 ?>
 <div class="comment-folded">
-  <span class="subject"><?php print $title .' '. $new; ?></span><span class="credit"><?php print t('by') .' '. $author; ?></span>
+  <span class="subject"><?php echo $title.' '.$new; ?></span><span class="credit"><?php echo t('by').' '.$author; ?></span>
 </div>

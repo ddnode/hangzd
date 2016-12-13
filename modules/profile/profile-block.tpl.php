@@ -29,13 +29,13 @@
  * @see template_preprocess_profile_block()
  */
 ?>
-<?php print $picture; ?>
+<?php echo $picture; ?>
 
 <?php foreach ($profile as $field) : ?>
   <p>
     <?php if ($field->type != 'checkbox') : ?>
-      <strong><?php print $field->title; ?></strong><br />
+      <strong><?php echo $field->title; ?></strong><br />
     <?php endif; ?>
-    <?php print $field->value; ?>
+    <?php echo $field->value; ?>
   </p>
 <?php endforeach; ?>

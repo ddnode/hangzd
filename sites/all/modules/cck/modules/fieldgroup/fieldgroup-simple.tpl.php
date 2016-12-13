@@ -16,18 +16,18 @@
  */
 ?>
 <?php if ($content) : ?>
-<div class="fieldgroup <?php print $group_name_css; ?>">
+<div class="fieldgroup <?php echo $group_name_css; ?>">
 
   <?php if ($label): ?>
-    <h2><?php print $label; ?></h2>
+    <h2><?php echo $label; ?></h2>
 
     <?php if ($description): ?>
-      <div class="description"><?php print $description; ?></div>
+      <div class="description"><?php echo $description; ?></div>
     <?php endif; ?>
 
   <?php endif; ?>
 
-  <div class="content"><?php print $content; ?></div>
+  <div class="content"><?php echo $content; ?></div>
 
 </div>
 <?php endif; ?>

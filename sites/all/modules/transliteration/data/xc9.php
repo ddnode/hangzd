@@ -1,7 +1,8 @@
 <?php
+
 // $Id: xc9.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'jun', 'junj', 'junh', 'jud', 'jul', 'julg', 'julm', 'julb', 'juls', 'jult', 'julp', 'julh', 'jum', 'jub', 'jubs', 'jus',
   0x10 => 'juss', 'jung', 'juj', 'juc', 'juk', 'jut', 'jup', 'juh', 'jweo', 'jweog', 'jweogg', 'jweogs', 'jweon', 'jweonj', 'jweonh', 'jweod',
   0x20 => 'jweol', 'jweolg', 'jweolm', 'jweolb', 'jweols', 'jweolt', 'jweolp', 'jweolh', 'jweom', 'jweob', 'jweobs', 'jweos', 'jweoss', 'jweong', 'jweoj', 'jweoc',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'jim', 'jib', 'jibs', 'jis', 'jiss', 'jing', 'jij', 'jic', 'jik', 'jit', 'jip', 'jih', 'jja', 'jjag', 'jjagg', 'jjags',
   0xE0 => 'jjan', 'jjanj', 'jjanh', 'jjad', 'jjal', 'jjalg', 'jjalm', 'jjalb', 'jjals', 'jjalt', 'jjalp', 'jjalh', 'jjam', 'jjab', 'jjabs', 'jjas',
   0xF0 => 'jjass', 'jjang', 'jjaj', 'jjac', 'jjak', 'jjat', 'jjap', 'jjah', 'jjae', 'jjaeg', 'jjaegg', 'jjaegs', 'jjaen', 'jjaenj', 'jjaenh', 'jjaed',
-);
+];

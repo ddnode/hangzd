@@ -1,4 +1,5 @@
 <?php
+
 // $Id: docs.php,v 1.1 2009/06/11 05:34:34 jgirlygirl Exp $
 /**
  * @file
@@ -66,30 +67,31 @@
  * - "indexhandler" is required. It specifies a function that returns an index where
  *   Skinr can find the values in its data structure.
  */
-function hook_skinr_data() {
-  $data['example']['form']['block_admin_configure'] = array(
-    'index_handler' => 'example_skinr_index_handler',
+function hook_skinr_data()
+{
+    $data['example']['form']['block_admin_configure'] = [
+    'index_handler'   => 'example_skinr_index_handler',
     'preprocess_hook' => 'block',
-    'title' => t('Skinr settings'),
-    'description' => t('Here you can manage which Skinr styles, if any, you want to apply.'),
-    'weight' => 1,
-    'collapsed' => TRUE,
+    'title'           => t('Skinr settings'),
+    'description'     => t('Here you can manage which Skinr styles, if any, you want to apply.'),
+    'weight'          => 1,
+    'collapsed'       => true,
     'selector_weight' => 0,
-    'selector_title' => t('Choose Skinr Style(s)'),
-  );
-  $data['example']['form']['block_add_block_form'] = array(
+    'selector_title'  => t('Choose Skinr Style(s)'),
+  ];
+    $data['example']['form']['block_add_block_form'] = [
     'index_handler' => 'example_skinr_index_handler',
-    'title' => t('Skinr settings'),
-    'description' => t('Here you can manage which Skinr styles, if any, you want to apply to this block.'),
-    'weight' => -10,
-    'collapsed' => FALSE,
-  );
+    'title'         => t('Skinr settings'),
+    'description'   => t('Here you can manage which Skinr styles, if any, you want to apply to this block.'),
+    'weight'        => -10,
+    'collapsed'     => false,
+  ];
 
-  $data['example']['preprocess']['block'] = array(
+    $data['example']['preprocess']['block'] = [
     'index_handler' => 'block_skinr_preprocess_handler_block',
-  );
+  ];
 
-  return $data;
+    return $data;
 }
 
 /**
@@ -98,13 +100,14 @@ function hook_skinr_data() {
  *
  * The full documentation for this hook is in the advanced help.
  */
-function hook_skinr_api() {
-  return array(
-    'api' => 1,
+function hook_skinr_api()
+{
+    return [
+    'api'  => 1,
     'path' => drupal_get_path('module', 'modulename'),
-  );
+  ];
 }
 
-/**
+/*
  * @}
  */

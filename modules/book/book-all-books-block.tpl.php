@@ -15,7 +15,7 @@
  */
 ?>
 <?php foreach ($book_menus as $book_id => $menu) : ?>
-<div id="book-block-menu-<?php print $book_id; ?>" class="book-block-menu">
-  <?php print $menu; ?>
+<div id="book-block-menu-<?php echo $book_id; ?>" class="book-block-menu">
+  <?php echo $menu; ?>
 </div>
 <?php endforeach; ?>

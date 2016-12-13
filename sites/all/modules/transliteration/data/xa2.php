@@ -1,7 +1,8 @@
 <?php
+
 // $Id: xa2.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'kax', 'ka', 'kap', 'kuox', 'kuo', 'kuop', 'kot', 'kox', 'ko', 'kop', 'ket', 'kex', 'ke', 'kep', 'kut', 'kux',
   0x10 => 'ku', 'kup', 'kurx', 'kur', 'ggit', 'ggix', 'ggi', 'ggiex', 'ggie', 'ggiep', 'ggat', 'ggax', 'gga', 'ggap', 'gguot', 'gguox',
   0x20 => 'gguo', 'gguop', 'ggot', 'ggox', 'ggo', 'ggop', 'gget', 'ggex', 'gge', 'ggep', 'ggut', 'ggux', 'ggu', 'ggup', 'ggurx', 'ggur',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'zzit', 'zzix', 'zzi', 'zzip', 'zziet', 'zziex', 'zzie', 'zziep', 'zzat', 'zzax', 'zza', 'zzap', 'zzox', 'zzo', 'zzop', 'zzex',
   0xE0 => 'zze', 'zzep', 'zzux', 'zzu', 'zzup', 'zzurx', 'zzur', 'zzyt', 'zzyx', 'zzy', 'zzyp', 'zzyrx', 'zzyr', 'nzit', 'nzix', 'nzi',
   0xF0 => 'nzip', 'nziex', 'nzie', 'nziep', 'nzat', 'nzax', 'nza', 'nzap', 'nzuox', 'nzuo', 'nzox', 'nzop', 'nzex', 'nze', 'nzux', 'nzu',
-);
+];

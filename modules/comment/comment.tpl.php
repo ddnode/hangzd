@@ -25,27 +25,27 @@
  * @see theme_comment()
  */
 ?>
-<div class="comment<?php print ($comment->new) ? ' comment-new' : ''; print ' '. $status ?> clear-block">
-  <?php print $picture ?>
+<div class="comment<?php echo ($comment->new) ? ' comment-new' : ''; echo ' '.$status ?> clear-block">
+  <?php echo $picture ?>
 
   <?php if ($comment->new): ?>
-    <span class="new"><?php print $new ?></span>
+    <span class="new"><?php echo $new ?></span>
   <?php endif; ?>
 
-  <h3><?php print $title ?></h3>
+  <h3><?php echo $title ?></h3>
 
   <div class="submitted">
-    <?php print $submitted ?>
+    <?php echo $submitted ?>
   </div>
 
   <div class="content">
-    <?php print $content ?>
+    <?php echo $content ?>
     <?php if ($signature): ?>
     <div class="user-signature clear-block">
-      <?php print $signature ?>
+      <?php echo $signature ?>
     </div>
     <?php endif; ?>
   </div>
 
-  <?php print $links ?>
+  <?php echo $links ?>
 </div>

@@ -14,25 +14,25 @@
  * @ingroup views_templates
  */
 ?>
-<table class="<?php print $class; ?>"<?php print $attributes; ?>>
+<table class="<?php echo $class; ?>"<?php echo $attributes; ?>>
   <?php if (!empty($title)) : ?>
-    <caption><?php print $title; ?></caption>
+    <caption><?php echo $title; ?></caption>
   <?php endif; ?>
   <thead>
     <tr>
       <?php foreach ($header as $field => $label): ?>
-        <th class="views-field views-field-<?php print $fields[$field]; ?>">
-          <?php print $label; ?>
+        <th class="views-field views-field-<?php echo $fields[$field]; ?>">
+          <?php echo $label; ?>
         </th>
       <?php endforeach; ?>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($rows as $count => $row): ?>
-      <tr class="<?php print implode(' ', $row_classes[$count]); ?>">
+      <tr class="<?php echo implode(' ', $row_classes[$count]); ?>">
         <?php foreach ($row as $field => $content): ?>
-          <td class="views-field views-field-<?php print $fields[$field]; ?>">
-            <?php print $content; ?>
+          <td class="views-field views-field-<?php echo $fields[$field]; ?>">
+            <?php echo $content; ?>
           </td>
         <?php endforeach; ?>
       </tr>

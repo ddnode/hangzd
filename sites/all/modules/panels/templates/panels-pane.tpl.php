@@ -17,36 +17,36 @@
  *   data including the contexts and all of the other panes being displayed.
  */
 ?>
-<div class="<?php print $classes; ?>" <?php print $id; ?>>
+<div class="<?php echo $classes; ?>" <?php echo $id; ?>>
   <?php if ($admin_links): ?>
     <div class="admin-links panel-hide">
-      <?php print $admin_links; ?>
+      <?php echo $admin_links; ?>
     </div>
   <?php endif; ?>
 
   <?php if ($title): ?>
-    <h2 class="pane-title"><?php print $title; ?></h2>
+    <h2 class="pane-title"><?php echo $title; ?></h2>
   <?php endif; ?>
 
   <?php if ($feeds): ?>
     <div class="feed">
-      <?php print $feeds; ?>
+      <?php echo $feeds; ?>
     </div>
   <?php endif; ?>
 
   <div class="pane-content">
-    <?php print $content; ?>
+    <?php echo $content; ?>
   </div>
 
   <?php if ($links): ?>
     <div class="links">
-      <?php print $links; ?>
+      <?php echo $links; ?>
     </div>
   <?php endif; ?>
 
   <?php if ($more): ?>
     <div class="more-link">
-      <?php print $more; ?>
+      <?php echo $more; ?>
     </div>
   <?php endif; ?>
 </div>

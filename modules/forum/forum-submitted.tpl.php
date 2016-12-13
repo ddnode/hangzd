@@ -17,11 +17,11 @@
  */
 ?>
 <?php if ($time): ?>
-  <?php print t(
-  '@time ago<br />by !author', array(
-    '@time' => $time,
+  <?php echo t(
+  '@time ago<br />by !author', [
+    '@time'   => $time,
     '!author' => $author,
-    )); ?>
+    ]); ?>
 <?php else: ?>
-  <?php print t('n/a'); ?>
+  <?php echo t('n/a'); ?>
 <?php endif; ?>

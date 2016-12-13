@@ -22,18 +22,18 @@
  *   types and an array of its tokens. The token arrays are keys containing the
  *   raw name of the token and values containing its user-friendly name.
  */
-function hook_token_list($type = 'all') {
-  $tokens = array();
+function hook_token_list($type = 'all')
+{
+    $tokens = [];
 
-  if ($type == 'global' || $type == 'all') {
-    $tokens['global']['random-number'] = t('A randomly generated number.');
+    if ($type == 'global' || $type == 'all') {
+        $tokens['global']['random-number'] = t('A randomly generated number.');
+    }
+    if ($type == 'node' || $type == 'all') {
+        $tokens['node']['node-random-nid'] = t("A randomly generated number between one and the node's unique ID.");
+    }
 
-  }
-  if ($type == 'node' || $type == 'all') {
-    $tokens['node']['node-random-nid'] = t("A randomly generated number between one and the node's unique ID.");
-  }
-
-  return $tokens;
+    return $tokens;
 }
 
 /**
@@ -54,18 +54,19 @@ function hook_token_list($type = 'all') {
  *
  * @see hook_token_values_alter()
  */
-function hook_token_values($type, $object = NULL, $options = array()) {
-  $values = array();
+function hook_token_values($type, $object = null, $options = [])
+{
+    $values = [];
 
-  if ($type == 'global') {
-    $values['random-number'] = mt_rand();
-  }
+    if ($type == 'global') {
+        $values['random-number'] = mt_rand();
+    }
 
-  if ($type == 'node' && !empty($object)) {
-    $values['node-random-nid'] = mt_rand(1, $object->nid);
-  }
+    if ($type == 'node' && !empty($object)) {
+        $values['node-random-nid'] = mt_rand(1, $object->nid);
+    }
 
-  return $values;
+    return $values;
 }
 
 /**
@@ -83,18 +84,19 @@ function hook_token_values($type, $object = NULL, $options = array()) {
  *
  * @see hook_token_values()
  */
-function hook_token_values_alter(&$replacements, $context) {
-  if ($context['type'] == 'node' && !empty($context['object'])) {
-    $node = $context['object'];
+function hook_token_values_alter(&$replacements, $context)
+{
+    if ($context['type'] == 'node' && !empty($context['object'])) {
+        $node = $context['object'];
 
-    if (isset($replacements['title-raw']) && !empty($node->field_title[0]['value'])) {
-      $title = $node->field_title[0]['value'];
-      $replacements['title-raw'] = $title;
-      $replacements['title'] = check_plain($title);
+        if (isset($replacements['title-raw']) && !empty($node->field_title[0]['value'])) {
+            $title = $node->field_title[0]['value'];
+            $replacements['title-raw'] = $title;
+            $replacements['title'] = check_plain($title);
+        }
     }
-  }
 }
 
-/**
+/*
  * @} End of "addtogroup hooks".
  */

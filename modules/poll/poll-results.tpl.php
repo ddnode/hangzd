@@ -18,11 +18,11 @@
  */
 ?>
 <div class="poll">
-  <?php print $results; ?>
+  <?php echo $results; ?>
   <div class="total">
-    <?php print t('Total votes: @votes', array('@votes' => $votes)); ?>
+    <?php echo t('Total votes: @votes', ['@votes' => $votes]); ?>
   </div>
   <?php if (!empty($cancel_form)): ?>
-    <?php print $cancel_form; ?>
+    <?php echo $cancel_form; ?>
   <?php endif; ?>
 </div>

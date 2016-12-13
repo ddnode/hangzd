@@ -10,11 +10,11 @@
 ?>
 <div class="item-list">
   <?php if (!empty($title)) : ?>
-    <h3><?php print $title; ?></h3>
+    <h3><?php echo $title; ?></h3>
   <?php endif; ?>
-  <<?php print $options['type']; ?>>
+  <<?php echo $options['type']; ?>>
     <?php foreach ($rows as $id => $row): ?>
-      <li class="<?php print $classes[$id]; ?>"><?php print $row; ?></li>
+      <li class="<?php echo $classes[$id]; ?>"><?php echo $row; ?></li>
     <?php endforeach; ?>
-  </<?php print $options['type']; ?>>
+  </<?php echo $options['type']; ?>>
 </div>

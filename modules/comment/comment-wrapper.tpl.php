@@ -31,5 +31,5 @@
  */
 ?>
 <div id="comments">
-  <?php print $content; ?>
+  <?php echo $content; ?>
 </div>

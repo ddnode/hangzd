@@ -1,4 +1,5 @@
 <?php
+
 // $Id: ctools.api.php,v 1.1.2.1 2010/06/06 20:16:17 sdboyer Exp $
 
 /**
@@ -46,20 +47,22 @@
  * directories contained therein named for the plugin type they contain.
  *
  * @param string $owner
- *   The system name of the module owning the plugin type for which a base
- *   directory location is being requested.
+ *                            The system name of the module owning the plugin type for which a base
+ *                            directory location is being requested.
  * @param string $plugin_type
- *   The name of the plugin type for which a base directory is being requested.
+ *                            The name of the plugin type for which a base directory is being requested.
+ *
  * @return string
- *   The path where CTools' plugin system should search for plugin files,
- *   relative to your module's root. Omit leading and trailing slashes.
+ *                The path where CTools' plugin system should search for plugin files,
+ *                relative to your module's root. Omit leading and trailing slashes.
  */
-function hook_ctools_plugin_directory($owner, $plugin_type) {
-  // Form 1 - for a module implementing only the 'content_types' plugin owned
+function hook_ctools_plugin_directory($owner, $plugin_type)
+{
+    // Form 1 - for a module implementing only the 'content_types' plugin owned
   // by CTools, this would cause the plugin system to search the
   // <moduleroot>/plugins/content_types directory for .inc plugin files.
   if ($owner == 'ctools' && $plugin_type == 'content_types') {
-    return 'plugins/content_types';
+      return 'plugins/content_types';
   }
 
   // Form 2 - if your module implements only Panels plugins, and has 'layouts'
@@ -69,19 +72,19 @@ function hook_ctools_plugin_directory($owner, $plugin_type) {
   // logic in your conditional, and also makes it easy to add plugins of those
   // types later without having to change this hook implementation.
   if ($owner == 'panels') {
-    return "plugins/$plugin_type";
+      return "plugins/$plugin_type";
   }
 
   // Form 3 - CTools makes no assumptions about where your plugins are located,
   // so you still have to implement this hook even for plugins created by your
   // own module.
   if ($owner == 'mymodule') {
-    // Yes, this is exactly like Form 2 - just a different reasoning for it.
+      // Yes, this is exactly like Form 2 - just a different reasoning for it.
     return "plugins/$plugin_type";
   }
   // Finally, if nothing matches, it's safe to return nothing at all (or NULL).
 }
 
-/**
+/*
  * @} End of "addtogroup hooks".
  */

@@ -10,8 +10,8 @@
 <?php if (is_array($vars)): ?>
   <?php  foreach ($vars as $class => $field): ?>
     <dl class="profile-category">
-      <dt class="profile-<?php print $class; ?>"><?php print $field['title']; ?></dt>
-      <dd class="profile-<?php print $class; ?>"><?php print $field['value']; ?></dd>
+      <dt class="profile-<?php echo $class; ?>"><?php echo $field['title']; ?></dt>
+      <dd class="profile-<?php echo $class; ?>"><?php echo $field['value']; ?></dd>
     </dl>
   <?php endforeach; ?>
 <?php endif; ?>

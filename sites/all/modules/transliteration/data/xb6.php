@@ -1,7 +1,8 @@
 <?php
+
 // $Id: xb6.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'ddyels', 'ddyelt', 'ddyelp', 'ddyelh', 'ddyem', 'ddyeb', 'ddyebs', 'ddyes', 'ddyess', 'ddyeng', 'ddyej', 'ddyec', 'ddyek', 'ddyet', 'ddyep', 'ddyeh',
   0x10 => 'ddo', 'ddog', 'ddogg', 'ddogs', 'ddon', 'ddonj', 'ddonh', 'ddod', 'ddol', 'ddolg', 'ddolm', 'ddolb', 'ddols', 'ddolt', 'ddolp', 'ddolh',
   0x20 => 'ddom', 'ddob', 'ddobs', 'ddos', 'ddoss', 'ddong', 'ddoj', 'ddoc', 'ddok', 'ddot', 'ddop', 'ddoh', 'ddwa', 'ddwag', 'ddwagg', 'ddwags',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'ddweok', 'ddweot', 'ddweop', 'ddweoh', 'ddwe', 'ddweg', 'ddwegg', 'ddwegs', 'ddwen', 'ddwenj', 'ddwenh', 'ddwed', 'ddwel', 'ddwelg', 'ddwelm', 'ddwelb',
   0xE0 => 'ddwels', 'ddwelt', 'ddwelp', 'ddwelh', 'ddwem', 'ddweb', 'ddwebs', 'ddwes', 'ddwess', 'ddweng', 'ddwej', 'ddwec', 'ddwek', 'ddwet', 'ddwep', 'ddweh',
   0xF0 => 'ddwi', 'ddwig', 'ddwigg', 'ddwigs', 'ddwin', 'ddwinj', 'ddwinh', 'ddwid', 'ddwil', 'ddwilg', 'ddwilm', 'ddwilb', 'ddwils', 'ddwilt', 'ddwilp', 'ddwilh',
-);
+];

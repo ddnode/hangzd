@@ -13,6 +13,7 @@
  * classes and function calls.
  *
  * An online version of the advanced help API documentation is available from:
+ *
  * @link http://views-help.doc.logrus.com/help/views/api @endlink
  *
  * Topics:
@@ -68,10 +69,12 @@
  * named 'includes'.
  *
  * The full documentation for this hook is in the advanced help.
+ *
  * @link http://views-help.doc.logrus.com/help/views/api-tables @endlink
  */
-function hook_views_data() {
-  // This example describes how to write hook_views_data() for the following
+function hook_views_data()
+{
+    // This example describes how to write hook_views_data() for the following
   // table:
   //
   // CREATE TABLE example_table (
@@ -91,25 +94,25 @@ function hook_views_data() {
   // Define this as a base table. In reality this is not very useful for
   // this table, as it isn't really a distinct object of its own, but
   // it makes a good example.
-  $data['example_table']['table']['base'] = array(
-    'field' => 'nid',
-    'title' => t('Example table'),
-    'help' => t("Example table contains example content and can be related to nodes."),
+  $data['example_table']['table']['base'] = [
+    'field'  => 'nid',
+    'title'  => t('Example table'),
+    'help'   => t('Example table contains example content and can be related to nodes.'),
     'weight' => -10,
-  );
+  ];
 
   // This table references the {node} table.
   // This creates an 'implicit' relationship to the node table, so that when 'Node'
   // is the base table, the fields are automatically available.
-  $data['example_table']['table']['join'] = array(
+  $data['example_table']['table']['join'] = [
     // Index this array by the table name to which this table refers.
     // 'left_field' is the primary key in the referenced table.
     // 'field' is the foreign key in this table.
-    'node' => array(
+    'node' => [
       'left_field' => 'nid',
-      'field' => 'nid',
-    ),
-  );
+      'field'      => 'nid',
+    ],
+  ];
 
   // Next, describe each of the individual fields in this table to Views. For
   // each field, you may define what field, sort, argument, and/or filter
@@ -117,92 +120,92 @@ function hook_views_data() {
   // may use the field.
 
   // Node ID field.
-  $data['example_table']['nid'] = array(
+  $data['example_table']['nid'] = [
     'title' => t('Example content'),
-    'help' => t('Some example content that references a node.'),
+    'help'  => t('Some example content that references a node.'),
     // Because this is a foreign key to the {node} table. This allows us to
     // have, when the view is configured with this relationship, all the fields
     // for the related node available.
-    'relationship' => array(
-      'base' => 'node',
-      'field' => 'nid',
+    'relationship' => [
+      'base'    => 'node',
+      'field'   => 'nid',
       'handler' => 'views_handler_relationship',
-      'label' => t('Example node'),
-    ),
-  );
+      'label'   => t('Example node'),
+    ],
+  ];
 
   // Example plain text field.
-  $data['example_table']['plain_text_field'] = array(
+  $data['example_table']['plain_text_field'] = [
     'title' => t('Plain text field'),
-    'help' => t('Just a plain text field.'),
-    'field' => array(
-      'handler' => 'views_handler_field',
-      'click sortable' => TRUE,
-    ),
-    'sort' => array(
+    'help'  => t('Just a plain text field.'),
+    'field' => [
+      'handler'        => 'views_handler_field',
+      'click sortable' => true,
+    ],
+    'sort' => [
       'handler' => 'views_handler_sort',
-    ),
-    'filter' => array(
+    ],
+    'filter' => [
       'handler' => 'views_handler_filter_string',
-    ),
-    'argument' => array(
+    ],
+    'argument' => [
       'handler' => 'views_handler_argument_string',
-    ),
-  );
+    ],
+  ];
 
   // Example numeric text field.
-  $data['example_table']['numeric_field'] = array(
+  $data['example_table']['numeric_field'] = [
     'title' => t('Numeric field'),
-    'help' => t('Just a numeric field.'),
-    'field' => array(
-      'handler' => 'views_handler_field_numeric',
-      'click sortable' => TRUE,
-     ),
-    'filter' => array(
+    'help'  => t('Just a numeric field.'),
+    'field' => [
+      'handler'        => 'views_handler_field_numeric',
+      'click sortable' => true,
+     ],
+    'filter' => [
       'handler' => 'views_handler_filter_numeric',
-    ),
-    'sort' => array(
+    ],
+    'sort' => [
       'handler' => 'views_handler_sort',
-    ),
-  );
+    ],
+  ];
 
   // Example boolean field.
-  $data['example_table']['boolean_field'] = array(
+  $data['example_table']['boolean_field'] = [
     'title' => t('Boolean field'),
-    'help' => t('Just an on/off field.'),
-    'field' => array(
-      'handler' => 'views_handler_field_boolean',
-      'click sortable' => TRUE,
-    ),
-    'filter' => array(
+    'help'  => t('Just an on/off field.'),
+    'field' => [
+      'handler'        => 'views_handler_field_boolean',
+      'click sortable' => true,
+    ],
+    'filter' => [
       'handler' => 'views_handler_filter_boolean_operator',
-      'label' => t('Published'),
-      'type' => 'yes-no',
+      'label'   => t('Published'),
+      'type'    => 'yes-no',
       // use boolean_field = 1 instead of boolean_field <> 0 in WHERE statment
-      'use equal' => TRUE,
-    ),
-    'sort' => array(
+      'use equal' => true,
+    ],
+    'sort' => [
       'handler' => 'views_handler_sort',
-    ),
-  );
+    ],
+  ];
 
   // Example timestamp field.
-  $data['example_table']['timestamp_field'] = array(
+  $data['example_table']['timestamp_field'] = [
     'title' => t('Timestamp field'),
-    'help' => t('Just a timestamp field.'),
-    'field' => array(
-      'handler' => 'views_handler_field_date',
-      'click sortable' => TRUE,
-    ),
-    'sort' => array(
+    'help'  => t('Just a timestamp field.'),
+    'field' => [
+      'handler'        => 'views_handler_field_date',
+      'click sortable' => true,
+    ],
+    'sort' => [
       'handler' => 'views_handler_sort_date',
-    ),
-    'filter' => array(
+    ],
+    'filter' => [
       'handler' => 'views_handler_filter_date',
-    ),
-  );
+    ],
+  ];
 
-  return $data;
+    return $data;
 }
 
 /**
@@ -215,25 +218,26 @@ function hook_views_data() {
  * named 'includes'.
  *
  * The full documentation for this hook is in the advanced help.
+ *
  * @link http://views-help.doc.logrus.com/help/views/api-tables @endlink
  */
-function hook_views_data_alter(&$data) {
-  // This example alters the title of the node: nid field for the admin.
+function hook_views_data_alter(&$data)
+{
+    // This example alters the title of the node: nid field for the admin.
   $data['node']['nid']['title'] = t('Node-Nid');
 
   // This example adds a example field to the users table
-  $data['users']['example_field'] = array(
-    'title' => t('Example field'),
-    'help' => t('Some examüple content that references a user'),
+  $data['users']['example_field'] = [
+    'title'   => t('Example field'),
+    'help'    => t('Some examüple content that references a user'),
     'handler' => 'hook_handlers_field_example_field',
-  );
+  ];
 
   // This example changes the handler of the node title field.
   // In this handler you could do stuff, like preview of the node, when clicking the node title.
 
   $data['node']['title']['handler'] = 'modulename_handlers_field_node_title';
 }
-
 
 /**
  * The full documentation for this hook is now in the advanced help.
@@ -246,15 +250,17 @@ function hook_views_data_alter(&$data) {
  * in views anywhere so might not be remembered when this is formally documented:
  * - style: 'even empty'
  */
-function hook_views_plugins() {
-  // example code here
+function hook_views_plugins()
+{
+    // example code here
 }
 
 /**
  * Alter existing plugins data, defined by modules.
  */
-function hook_views_plugins_alter(&$plugins) {
-  // Add apachesolr to the base of the node row plugin.
+function hook_views_plugins_alter(&$plugins)
+{
+    // Add apachesolr to the base of the node row plugin.
   $plugins['row']['node']['base'][] = 'apachesolr';
 }
 
@@ -264,8 +270,9 @@ function hook_views_plugins_alter(&$plugins) {
  *
  * The full documentation for this hook is in the advanced help.
  */
-function hook_views_handlers() {
-  // example code here
+function hook_views_handlers()
+{
+    // example code here
 }
 
 /**
@@ -280,11 +287,12 @@ function hook_views_handlers() {
  *       the root module directory or a subdirectory called includes, specify
  *       its path here.
  */
-function hook_views_api() {
-  return array(
-    'api' => 2,
-    'path' => drupal_get_path('module', 'example') . '/includes/views', 
-  );
+function hook_views_api()
+{
+    return [
+    'api'  => 2,
+    'path' => drupal_get_path('module', 'example').'/includes/views',
+  ];
 }
 
 /**
@@ -304,233 +312,206 @@ function hook_views_api() {
  *   and add t() to all title and label strings, with the exception of menu
  *   strings.
  */
-function hook_views_default_views() {
-  // Begin copy and paste of output from the Export tab of a view.
-  $view = new view;
-  $view->name = 'frontpage';
-  $view->description = t('Emulates the default Drupal front page; you may set the default home page path to this view to make it your front page.');
-  $view->tag = t('default');
-  $view->base_table = 'node';
-  $view->api_version = 2;
-  $view->disabled = FALSE; // Edit this to true to make a default view disabled initially
-  $view->display = array();
-    $display = new views_display;
+function hook_views_default_views()
+{
+    // Begin copy and paste of output from the Export tab of a view.
+  $view = new view();
+    $view->name = 'frontpage';
+    $view->description = t('Emulates the default Drupal front page; you may set the default home page path to this view to make it your front page.');
+    $view->tag = t('default');
+    $view->base_table = 'node';
+    $view->api_version = 2;
+    $view->disabled = false; // Edit this to true to make a default view disabled initially
+  $view->display = [];
+    $display = new views_display();
     $display->id = 'default';
     $display->display_title = t('Defaults');
     $display->display_plugin = 'default';
     $display->position = '1';
-    $display->display_options = array (
-    'style_plugin' => 'default',
-    'style_options' =>
-    array (
-    ),
-    'row_plugin' => 'node',
-    'row_options' =>
-    array (
+    $display->display_options = [
+    'style_plugin'  => 'default',
+    'style_options' => [
+    ],
+    'row_plugin'  => 'node',
+    'row_options' => [
       'teaser' => 1,
-      'links' => 1,
-    ),
-    'relationships' =>
-    array (
-    ),
-    'fields' =>
-    array (
-    ),
-    'sorts' =>
-    array (
-      'sticky' =>
-      array (
-        'id' => 'sticky',
+      'links'  => 1,
+    ],
+    'relationships' => [
+    ],
+    'fields' => [
+    ],
+    'sorts' => [
+      'sticky' => [
+        'id'    => 'sticky',
         'table' => 'node',
         'field' => 'sticky',
         'order' => 'ASC',
-      ),
-      'created' =>
-      array (
-        'id' => 'created',
-        'table' => 'node',
-        'field' => 'created',
-        'order' => 'ASC',
+      ],
+      'created' => [
+        'id'           => 'created',
+        'table'        => 'node',
+        'field'        => 'created',
+        'order'        => 'ASC',
         'relationship' => 'none',
-        'granularity' => 'second',
-      ),
-    ),
-    'arguments' =>
-    array (
-    ),
-    'filters' =>
-    array (
-      'promote' =>
-      array (
-        'id' => 'promote',
-        'table' => 'node',
-        'field' => 'promote',
+        'granularity'  => 'second',
+      ],
+    ],
+    'arguments' => [
+    ],
+    'filters' => [
+      'promote' => [
+        'id'       => 'promote',
+        'table'    => 'node',
+        'field'    => 'promote',
         'operator' => '=',
-        'value' => '1',
-        'group' => 0,
-        'exposed' => false,
-        'expose' =>
-        array (
+        'value'    => '1',
+        'group'    => 0,
+        'exposed'  => false,
+        'expose'   => [
           'operator' => false,
-          'label' => '',
-        ),
-      ),
-      'status' =>
-      array (
-        'id' => 'status',
-        'table' => 'node',
-        'field' => 'status',
+          'label'    => '',
+        ],
+      ],
+      'status' => [
+        'id'       => 'status',
+        'table'    => 'node',
+        'field'    => 'status',
         'operator' => '=',
-        'value' => '1',
-        'group' => 0,
-        'exposed' => false,
-        'expose' =>
-        array (
+        'value'    => '1',
+        'group'    => 0,
+        'exposed'  => false,
+        'expose'   => [
           'operator' => false,
-          'label' => '',
-        ),
-      ),
-    ),
+          'label'    => '',
+        ],
+      ],
+    ],
     'items_per_page' => 10,
-    'use_pager' => '1',
-    'pager_element' => 0,
-    'title' => '',
-    'header' => '',
-    'header_format' => '1',
-    'footer' => '',
-    'footer_format' => '1',
-    'empty' => '',
-    'empty_format' => '1',
-  );
-  $view->display['default'] = $display;
-    $display = new views_display;
+    'use_pager'      => '1',
+    'pager_element'  => 0,
+    'title'          => '',
+    'header'         => '',
+    'header_format'  => '1',
+    'footer'         => '',
+    'footer_format'  => '1',
+    'empty'          => '',
+    'empty_format'   => '1',
+  ];
+    $view->display['default'] = $display;
+    $display = new views_display();
     $display->id = 'page';
     $display->display_title = t('Page');
     $display->display_plugin = 'page';
     $display->position = '2';
-    $display->display_options = array (
-    'defaults' =>
-    array (
-      'access' => true,
-      'title' => true,
-      'header' => true,
-      'header_format' => true,
-      'header_empty' => true,
-      'footer' => true,
-      'footer_format' => true,
-      'footer_empty' => true,
-      'empty' => true,
-      'empty_format' => true,
-      'items_per_page' => true,
-      'offset' => true,
-      'use_pager' => true,
-      'pager_element' => true,
-      'link_display' => true,
-      'php_arg_code' => true,
+    $display->display_options = [
+    'defaults' => [
+      'access'          => true,
+      'title'           => true,
+      'header'          => true,
+      'header_format'   => true,
+      'header_empty'    => true,
+      'footer'          => true,
+      'footer_format'   => true,
+      'footer_empty'    => true,
+      'empty'           => true,
+      'empty_format'    => true,
+      'items_per_page'  => true,
+      'offset'          => true,
+      'use_pager'       => true,
+      'pager_element'   => true,
+      'link_display'    => true,
+      'php_arg_code'    => true,
       'exposed_options' => true,
-      'style_plugin' => true,
-      'style_options' => true,
-      'row_plugin' => true,
-      'row_options' => true,
-      'relationships' => true,
-      'fields' => true,
-      'sorts' => true,
-      'arguments' => true,
-      'filters' => true,
-      'use_ajax' => true,
-      'distinct' => true,
-    ),
-    'relationships' =>
-    array (
-    ),
-    'fields' =>
-    array (
-    ),
-    'sorts' =>
-    array (
-    ),
-    'arguments' =>
-    array (
-    ),
-    'filters' =>
-    array (
-    ),
+      'style_plugin'    => true,
+      'style_options'   => true,
+      'row_plugin'      => true,
+      'row_options'     => true,
+      'relationships'   => true,
+      'fields'          => true,
+      'sorts'           => true,
+      'arguments'       => true,
+      'filters'         => true,
+      'use_ajax'        => true,
+      'distinct'        => true,
+    ],
+    'relationships' => [
+    ],
+    'fields' => [
+    ],
+    'sorts' => [
+    ],
+    'arguments' => [
+    ],
+    'filters' => [
+    ],
     'path' => 'frontpage',
-  );
-  $view->display['page'] = $display;
-    $display = new views_display;
+  ];
+    $view->display['page'] = $display;
+    $display = new views_display();
     $display->id = 'feed';
     $display->display_title = t('Feed');
     $display->display_plugin = 'feed';
     $display->position = '3';
-    $display->display_options = array (
-    'defaults' =>
-    array (
-      'access' => true,
-      'title' => false,
-      'header' => true,
-      'header_format' => true,
-      'header_empty' => true,
-      'footer' => true,
-      'footer_format' => true,
-      'footer_empty' => true,
-      'empty' => true,
-      'empty_format' => true,
-      'use_ajax' => true,
-      'items_per_page' => true,
-      'offset' => true,
-      'use_pager' => true,
-      'pager_element' => true,
-      'use_more' => true,
-      'distinct' => true,
-      'link_display' => true,
-      'php_arg_code' => true,
+    $display->display_options = [
+    'defaults' => [
+      'access'          => true,
+      'title'           => false,
+      'header'          => true,
+      'header_format'   => true,
+      'header_empty'    => true,
+      'footer'          => true,
+      'footer_format'   => true,
+      'footer_empty'    => true,
+      'empty'           => true,
+      'empty_format'    => true,
+      'use_ajax'        => true,
+      'items_per_page'  => true,
+      'offset'          => true,
+      'use_pager'       => true,
+      'pager_element'   => true,
+      'use_more'        => true,
+      'distinct'        => true,
+      'link_display'    => true,
+      'php_arg_code'    => true,
       'exposed_options' => true,
-      'style_plugin' => false,
-      'style_options' => false,
-      'row_plugin' => false,
-      'row_options' => false,
-      'relationships' => true,
-      'fields' => true,
-      'sorts' => true,
-      'arguments' => true,
-      'filters' => true,
-    ),
-    'relationships' =>
-    array (
-    ),
-    'fields' =>
-    array (
-    ),
-    'sorts' =>
-    array (
-    ),
-    'arguments' =>
-    array (
-    ),
-    'filters' =>
-    array (
-    ),
-    'displays' =>
-    array (
+      'style_plugin'    => false,
+      'style_options'   => false,
+      'row_plugin'      => false,
+      'row_options'     => false,
+      'relationships'   => true,
+      'fields'          => true,
+      'sorts'           => true,
+      'arguments'       => true,
+      'filters'         => true,
+    ],
+    'relationships' => [
+    ],
+    'fields' => [
+    ],
+    'sorts' => [
+    ],
+    'arguments' => [
+    ],
+    'filters' => [
+    ],
+    'displays' => [
       'default' => 'default',
-      'page' => 'page',
-    ),
-    'style_plugin' => 'rss',
-    'style_options' =>
-    array (
+      'page'    => 'page',
+    ],
+    'style_plugin'  => 'rss',
+    'style_options' => [
       'mission_description' => 1,
-      'description' => '',
-    ),
-    'row_plugin' => 'node_rss',
-    'row_options' =>
-    array (
+      'description'         => '',
+    ],
+    'row_plugin'  => 'node_rss',
+    'row_options' => [
       'item_length' => 'default',
-    ),
-    'path' => 'rss.xml',
+    ],
+    'path'  => 'rss.xml',
     'title' => t('Front page feed'),
-  );
-  $view->display['feed'] = $display;
+  ];
+    $view->display['feed'] = $display;
   // End copy and paste of Export tab output.
 
   // Add view to list of views to provide.
@@ -546,29 +527,32 @@ function hook_views_default_views() {
  * This hook is called right before all default views are cached to the
  * database. It takes a keyed array of views by reference.
  */
-function hook_views_default_views_alter(&$views) {
-  if (isset($views['taxonomy_term'])) {
-    $views['taxonomy_term']->set_display('default');
-    $views['taxonomy_term']->display_handler->set_option('title', 'Categories');
-  }
+function hook_views_default_views_alter(&$views)
+{
+    if (isset($views['taxonomy_term'])) {
+        $views['taxonomy_term']->set_display('default');
+        $views['taxonomy_term']->display_handler->set_option('title', 'Categories');
+    }
 }
 
 /**
- * Stub hook documentation
+ * Stub hook documentation.
  *
  * This hook should be placed in MODULENAME.views_convert.inc and it will be auto-loaded.
  * This must either be in the same directory as the .module file or in a subdirectory
  * named 'includes'.
  */
-function hook_views_convert() {
-  // example code here
+function hook_views_convert()
+{
+    // example code here
 }
 
 /**
- * Stub hook documentation
+ * Stub hook documentation.
  */
-function hook_views_query_substitutions() {
-  // example code here
+function hook_views_query_substitutions()
+{
+    // example code here
 }
 
 /**
@@ -578,8 +562,9 @@ function hook_views_query_substitutions() {
  * Adding output to the view can be accomplished by placing text on
  * $view->attachment_before and $view->attachment_after.
  */
-function hook_views_pre_view(&$view, &$display_id, &$args) {
-  // example code here
+function hook_views_pre_view(&$view, &$display_id, &$args)
+{
+    // example code here
 }
 
 /**
@@ -589,8 +574,9 @@ function hook_views_pre_view(&$view, &$display_id, &$args) {
  * Adding output to the view can be accomplished by placing text on
  * $view->attachment_before and $view->attachment_after.
  */
-function hook_views_pre_build(&$view) {
-  // example code here
+function hook_views_pre_build(&$view)
+{
+    // example code here
 }
 
 /**
@@ -600,8 +586,9 @@ function hook_views_pre_build(&$view) {
  * Adding output to the view can be accomplished by placing text on
  * $view->attachment_before and $view->attachment_after.
  */
-function hook_views_post_build(&$view) {
-  // example code here
+function hook_views_post_build(&$view)
+{
+    // example code here
 }
 
 /**
@@ -611,8 +598,9 @@ function hook_views_post_build(&$view) {
  * Adding output to the view can be accomplished by placing text on
  * $view->attachment_before and $view->attachment_after.
  */
-function hook_views_pre_execute(&$view) {
-  // example code here
+function hook_views_pre_execute(&$view)
+{
+    // example code here
 }
 
 /**
@@ -624,8 +612,9 @@ function hook_views_pre_execute(&$view) {
  * $view->attachment_before and $view->attachment_after. Altering the
  * content can be achieved by editing the items of $view->result.
  */
-function hook_views_post_execute(&$view) {
-  // example code here
+function hook_views_post_execute(&$view)
+{
+    // example code here
 }
 
 /**
@@ -639,8 +628,9 @@ function hook_views_post_execute(&$view) {
  *
  * This hook can be utilized by themes.
  */
-function hook_views_pre_render(&$view) {
-  // example code here
+function hook_views_pre_render(&$view)
+{
+    // example code here
 }
 
 /**
@@ -665,20 +655,20 @@ function hook_views_pre_render(&$view) {
  *
  * This hook can be utilized by themes.
  */
-function hook_views_post_render(&$view, &$output, &$cache) {
-
+function hook_views_post_render(&$view, &$output, &$cache)
+{
 }
 
 /**
- * Stub hook documentation
+ * Stub hook documentation.
  *
  * This hook should be placed in MODULENAME.views.inc and it will be auto-loaded.
  * This must either be in the same directory as the .module file or in a subdirectory
  * named 'includes'.
- *
  */
-function hook_views_query_alter(&$view, &$query) {
-  // example code here
+function hook_views_query_alter(&$view, &$query)
+{
+    // example code here
 }
 
 /**
@@ -694,8 +684,9 @@ function hook_views_query_alter(&$view, &$query) {
  *
  * @see theme_links
  */
-function hook_views_admin_links_alter(&$links, $view) {
-  // example code here
+function hook_views_admin_links_alter(&$links, $view)
+{
+    // example code here
 }
 
 /**
@@ -711,10 +702,11 @@ function hook_views_admin_links_alter(&$links, $view) {
  *
  * @see theme_table
  */
-function hook_views_preview_info_alter(&$rows, $view) {
-  // example code here
+function hook_views_preview_info_alter(&$rows, $view)
+{
+    // example code here
 }
 
-/**
+/*
  * @}
  */

@@ -28,13 +28,13 @@
  * To check for all available data within $search, use the code below.
  *
  *   <?php print '<pre>'. check_plain(print_r($search, 1)) .'</pre>'; ?>
- * 
+ *
  * To add a "Search" label, use the code below.
- * 
+ *
  *   <label for="edit-search_theme_form"><?php print t('Search') ?></label>
  *
  * To add an "Advanced Search" link, use the code below.
- * 
+ *
  *   <a class="advanced-search-link" href="/search" title="<?php print t('Advanced Search') ?>"><?php print t('Advanced Search') ?></a>
  *
  * @see template_preprocess_search_theme_form()
@@ -42,7 +42,7 @@
 ?>
 
 <div id="search" class="container-inline">
-  <input class="search-input form-text" type="text" maxlength="128" name="search_theme_form" id="edit-search-theme-form-header"  size="15" value="" title="<?php print t('Enter search terms') ?>" />
-  <input id="search_header" class="search_submit" type="submit" name="op" value="<?php print t('Search') ?>"  />
-  <?php print $search['hidden']; ?>
+  <input class="search-input form-text" type="text" maxlength="128" name="search_theme_form" id="edit-search-theme-form-header"  size="15" value="" title="<?php echo t('Enter search terms') ?>" />
+  <input id="search_header" class="search_submit" type="submit" name="op" value="<?php echo t('Search') ?>"  />
+  <?php echo $search['hidden']; ?>
 </div><!-- /search -->

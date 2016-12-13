@@ -71,34 +71,34 @@
  * @see zen_process()
  */
 ?>
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix">
-  <?php print $user_picture; ?>
+<div id="node-<?php echo $node->nid; ?>" class="<?php echo $classes; ?> clearfix">
+  <?php echo $user_picture; ?>
 
   <?php if (!$page && $title): ?>
-    <h2 class="title"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+    <h2 class="title"><a href="<?php echo $node_url; ?>"><?php echo $title; ?></a></h2>
   <?php endif; ?>
 
   <?php if ($unpublished): ?>
-    <div class="unpublished"><?php print t('Unpublished'); ?></div>
+    <div class="unpublished"><?php echo t('Unpublished'); ?></div>
   <?php endif; ?>
 
   <?php if ($display_submitted || $terms): ?>
     <div class="meta">
       <?php if ($display_submitted): ?>
         <span class="submitted">
-          <?php print $submitted; ?>
+          <?php echo $submitted; ?>
         </span>
       <?php endif; ?>
 
       <?php if ($terms): ?>
-        <div class="terms terms-inline"><?php print $terms; ?></div>
+        <div class="terms terms-inline"><?php echo $terms; ?></div>
       <?php endif; ?>
     </div>
   <?php endif; ?>
 
   <div class="content">
-    <?php print $content; ?>
+    <?php echo $content; ?>
   </div>
 
-  <?php print $links; ?>
+  <?php echo $links; ?>
 </div><!-- /.node -->

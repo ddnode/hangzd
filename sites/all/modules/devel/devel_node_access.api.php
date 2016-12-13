@@ -41,16 +41,17 @@
  *
  * @ingroup node_access
  */
-function hook_node_access_explain($row) {
-  if ($row->realm == 'mymodule_myrealm') {
-    if ($row->grant_view) {
-      $name = db_result(db_query('SELECT name FROM {role} WHERE rid = %d', $row->gid));
-      return 'Role ' . theme_placeholder($name) . ' may view this node.';
+function hook_node_access_explain($row)
+{
+    if ($row->realm == 'mymodule_myrealm') {
+        if ($row->grant_view) {
+            $name = db_result(db_query('SELECT name FROM {role} WHERE rid = %d', $row->gid));
+
+            return 'Role '.theme_placeholder($name).' may view this node.';
+        } else {
+            return 'No access.';
+        }
     }
-    else {
-      return 'No access.';
-    }
-  }
 }
 
 /**
@@ -67,12 +68,13 @@ function hook_node_access_explain($row) {
  *
  * @ingroup node_access
  */
-function hook_node_access_acknowledge($grant) {
-  if ($grant['realm'] == 'mymodule_all' && $grant['nid'] == 0) {
-    return TRUE;
-  }
+function hook_node_access_acknowledge($grant)
+{
+    if ($grant['realm'] == 'mymodule_all' && $grant['nid'] == 0) {
+        return true;
+    }
 }
 
-/**
+/*
  * @} End of "addtogroup hooks".
  */

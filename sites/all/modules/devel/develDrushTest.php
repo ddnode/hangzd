@@ -6,20 +6,21 @@
  *   To run the tests, use phpunit --bootstrap=/path/to/drush/tests/drush_testcase.inc.
  *   Note that we are pointing to the drush_testcase.inc file under /tests subdir in drush.
  */
-class develCase extends Drush_CommandTestCase {
-
-  public function testFnView() {
-    $sites = $this->setUpDrupal(1, TRUE);
-    $options = array(
+class develCase extends Drush_CommandTestCase
+{
+    public function testFnView()
+    {
+        $sites = $this->setUpDrupal(1, true);
+        $options = [
       'root' => $this->webroot(),
-      'uri' => key($sites),
-    );
-    $this->drush('pm-download', array('devel'), $options + array('cache' => NULL));
-    $this->drush('pm-enable', array('devel'), $options + array('skip' => NULL, 'yes' => NULL));
+      'uri'  => key($sites),
+    ];
+        $this->drush('pm-download', ['devel'], $options + ['cache' => null]);
+        $this->drush('pm-enable', ['devel'], $options + ['skip' => null, 'yes' => null]);
 
-    $this->drush('fn-view', array('drush_main'), $options);
-    $output = $this->getOutput();
-    $this->assertContains('@return', $output, 'Output contain @return Doxygen.');
-    $this->assertContains('function drush_main() {', $output, 'Output contains function drush_main() declaration');
-  }
+        $this->drush('fn-view', ['drush_main'], $options);
+        $output = $this->getOutput();
+        $this->assertContains('@return', $output, 'Output contain @return Doxygen.');
+        $this->assertContains('function drush_main() {', $output, 'Output contains function drush_main() declaration');
+    }
 }

@@ -15,5 +15,5 @@
  */
 ?>
 <div class="picture">
-  <?php print $picture; ?>
+  <?php echo $picture; ?>
 </div>

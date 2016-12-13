@@ -32,5 +32,5 @@
  */
 ?>
 <div class="container-inline">
-  <?php print $search_form; ?>
+  <?php echo $search_form; ?>
 </div>

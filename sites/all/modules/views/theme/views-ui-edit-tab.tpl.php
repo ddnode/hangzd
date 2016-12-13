@@ -4,36 +4,40 @@
  * Template for the primary view editing window.
  */
 ?>
-<div class="clear-block views-display views-display-<?php print $display->id; if (!empty($display->deleted)) { print ' views-display-deleted'; }; ?>">
-  <?php // top section ?>
+<div class="clear-block views-display views-display-<?php echo $display->id; if (!empty($display->deleted)) {
+    echo ' views-display-deleted';
+} ?>">
+  <?php // top section?>
   <?php if ($remove): ?>
-    <div class="remove-display"><?php print $remove ?></div>
+    <div class="remove-display"><?php echo $remove ?></div>
   <?php endif; ?>
   <?php if ($clone): ?>
-    <div class="clone-display"><?php print $clone ?></div>
+    <div class="clone-display"><?php echo $clone ?></div>
   <?php endif; ?>
   <div class="top">
     <div class="inside">
-      <?php print $display_help_icon; ?>
+      <?php echo $display_help_icon; ?>
       <span class="display-title">
-        <?php print $title; ?>
+        <?php echo $title; ?>
       </span>
       <span class="display-description">
-        <?php print $description; ?>
+        <?php echo $description; ?>
       </span>
     </div>
   </div>
 
-  <?php // left section ?>
+  <?php // left section?>
   <div class="left tab-section">
     <div class="inside">
-      <?php // If this is the default display, add some basic stuff here. ?>
+      <?php // If this is the default display, add some basic stuff here.?>
       <?php if ($default): ?>
         <div class="views-category">
-          <div class="views-category-title"><?php print t('View settings'); ?></div>
+          <div class="views-category-title"><?php echo t('View settings'); ?></div>
           <div class="views-category-content">
-            <div class="<?php $details_class; if (!empty($details_changed)) { print ' changed'; }?>">
-              <?php print $details ?>
+            <div class="<?php $details_class; if (!empty($details_changed)) {
+    echo ' changed';
+}?>">
+              <?php echo $details ?>
             </div>
           </div>
         </div>
@@ -41,23 +45,23 @@
 
       <?php foreach ($categories as $category_id => $category): ?>
         <div class="views-category">
-          <div class="views-category-title views-category-<?php print $category_id; ?>">
-            <?php print $category['title']; ?>
+          <div class="views-category-title views-category-<?php echo $category_id; ?>">
+            <?php echo $category['title']; ?>
           </div>
           <div class="views-category-content">
             <?php foreach ($category['data'] as $data): ?>
               <div class="<?php
-                print $data['class'];
+                echo $data['class'];
                 if (!empty($data['overridden'])) {
-                  print ' overridden';
+                    echo ' overridden';
                 }
                 if (!empty($data['defaulted'])) {
-                  print ' defaulted';
+                    echo ' defaulted';
                 }
                 if (!empty($data['changed'])) {
-                  print ' changed';
+                    echo ' changed';
                 }?>">
-                <?php print $data['links'] . $data['content'] ?>
+                <?php echo $data['links'].$data['content'] ?>
               </div>
             <?php endforeach; ?>
           </div>
@@ -66,31 +70,31 @@
     </div>
   </div>
 
-  <?php // middle section ?>
+  <?php // middle section?>
   <div class="middle tab-section">
     <div class="inside">
       <div class="views-category">
-        <?php print $relationships; ?>
+        <?php echo $relationships; ?>
       </div>
       <div class="views-category">
-        <?php print $arguments; ?>
+        <?php echo $arguments; ?>
       </div>
       <?php if (!empty($fields)): ?>
         <div class="views-category">
-          <?php print $fields; ?>
+          <?php echo $fields; ?>
         </div>
       <?php endif; ?>
     </div>
   </div>
 
-  <?php // right section ?>
+  <?php // right section?>
   <div class="right tab-section">
     <div class="inside">
       <div class="views-category">
-        <?php print $sorts; ?>
+        <?php echo $sorts; ?>
       </div>
       <div class="views-category">
-        <?php print $filters; ?>
+        <?php echo $filters; ?>
       </div>
     </div>
   </div>

@@ -32,10 +32,10 @@
 ?>
 
 <?php if ($content) : ?>
-<div id="comments" class="comments block <?php print $skinr; ?>">
+<div id="comments" class="comments block <?php echo $skinr; ?>">
   <h2 class="comments-header">
-    <?php print t('Comments'); ?>
+    <?php echo t('Comments'); ?>
   </h2>
-  <?php print $content; ?>
+  <?php echo $content; ?>
 </div>
 <?php endif; ?><!-- /comments -->

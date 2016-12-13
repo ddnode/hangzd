@@ -10,7 +10,6 @@
  * All Drupal code is released under the GNU General Public License.
  * See COPYRIGHT.txt and LICENSE.txt.
  */
-
 require_once './includes/bootstrap.inc';
 drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
 
@@ -18,7 +17,7 @@ $return = menu_execute_active_handler();
 
 // Menu status constants are integers; page content is a string.
 if (is_int($return)) {
-  switch ($return) {
+    switch ($return) {
     case MENU_NOT_FOUND:
       drupal_not_found();
       break;
@@ -29,10 +28,9 @@ if (is_int($return)) {
       drupal_site_offline();
       break;
   }
-}
-elseif (isset($return)) {
-  // Print any value (including an empty string) except NULL or undefined:
-  print theme('page', $return);
+} elseif (isset($return)) {
+    // Print any value (including an empty string) except NULL or undefined:
+  echo theme('page', $return);
 }
 
 drupal_page_footer();

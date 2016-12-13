@@ -1,7 +1,8 @@
 <?php
+
 // $Id: xcc.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'jjyim', 'jjyib', 'jjyibs', 'jjyis', 'jjyiss', 'jjying', 'jjyij', 'jjyic', 'jjyik', 'jjyit', 'jjyip', 'jjyih', 'jji', 'jjig', 'jjigg', 'jjigs',
   0x10 => 'jjin', 'jjinj', 'jjinh', 'jjid', 'jjil', 'jjilg', 'jjilm', 'jjilb', 'jjils', 'jjilt', 'jjilp', 'jjilh', 'jjim', 'jjib', 'jjibs', 'jjis',
   0x20 => 'jjiss', 'jjing', 'jjij', 'jjic', 'jjik', 'jjit', 'jjip', 'jjih', 'ca', 'cag', 'cagg', 'cags', 'can', 'canj', 'canh', 'cad',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'cyeo', 'cyeog', 'cyeogg', 'cyeogs', 'cyeon', 'cyeonj', 'cyeonh', 'cyeod', 'cyeol', 'cyeolg', 'cyeolm', 'cyeolb', 'cyeols', 'cyeolt', 'cyeolp', 'cyeolh',
   0xE0 => 'cyeom', 'cyeob', 'cyeobs', 'cyeos', 'cyeoss', 'cyeong', 'cyeoj', 'cyeoc', 'cyeok', 'cyeot', 'cyeop', 'cyeoh', 'cye', 'cyeg', 'cyegg', 'cyegs',
   0xF0 => 'cyen', 'cyenj', 'cyenh', 'cyed', 'cyel', 'cyelg', 'cyelm', 'cyelb', 'cyels', 'cyelt', 'cyelp', 'cyelh', 'cyem', 'cyeb', 'cyebs', 'cyes',
-);
+];

@@ -1,7 +1,8 @@
 <?php
+
 // $Id: xc4.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'sswals', 'sswalt', 'sswalp', 'sswalh', 'sswam', 'sswab', 'sswabs', 'sswas', 'sswass', 'sswang', 'sswaj', 'sswac', 'sswak', 'sswat', 'sswap', 'sswah',
   0x10 => 'sswae', 'sswaeg', 'sswaegg', 'sswaegs', 'sswaen', 'sswaenj', 'sswaenh', 'sswaed', 'sswael', 'sswaelg', 'sswaelm', 'sswaelb', 'sswaels', 'sswaelt', 'sswaelp', 'sswaelh',
   0x20 => 'sswaem', 'sswaeb', 'sswaebs', 'sswaes', 'sswaess', 'sswaeng', 'sswaej', 'sswaec', 'sswaek', 'sswaet', 'sswaep', 'sswaeh', 'ssoe', 'ssoeg', 'ssoegg', 'ssoegs',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'sswik', 'sswit', 'sswip', 'sswih', 'ssyu', 'ssyug', 'ssyugg', 'ssyugs', 'ssyun', 'ssyunj', 'ssyunh', 'ssyud', 'ssyul', 'ssyulg', 'ssyulm', 'ssyulb',
   0xE0 => 'ssyuls', 'ssyult', 'ssyulp', 'ssyulh', 'ssyum', 'ssyub', 'ssyubs', 'ssyus', 'ssyuss', 'ssyung', 'ssyuj', 'ssyuc', 'ssyuk', 'ssyut', 'ssyup', 'ssyuh',
   0xF0 => 'sseu', 'sseug', 'sseugg', 'sseugs', 'sseun', 'sseunj', 'sseunh', 'sseud', 'sseul', 'sseulg', 'sseulm', 'sseulb', 'sseuls', 'sseult', 'sseulp', 'sseulh',
-);
+];

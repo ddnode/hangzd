@@ -11,6 +11,6 @@
  * - $classes: The classes that must be applied to the top divs.
  */
 ?>
-<div class="<?php print $classes ?>">
-  <?php print $output; ?>
+<div class="<?php echo $classes ?>">
+  <?php echo $output; ?>
 </div>

@@ -1,7 +1,8 @@
 <?php
+
 // $Id: xb4.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'dwaen', 'dwaenj', 'dwaenh', 'dwaed', 'dwael', 'dwaelg', 'dwaelm', 'dwaelb', 'dwaels', 'dwaelt', 'dwaelp', 'dwaelh', 'dwaem', 'dwaeb', 'dwaebs', 'dwaes',
   0x10 => 'dwaess', 'dwaeng', 'dwaej', 'dwaec', 'dwaek', 'dwaet', 'dwaep', 'dwaeh', 'doe', 'doeg', 'doegg', 'doegs', 'doen', 'doenj', 'doenh', 'doed',
   0x20 => 'doel', 'doelg', 'doelm', 'doelb', 'doels', 'doelt', 'doelp', 'doelh', 'doem', 'doeb', 'doebs', 'does', 'doess', 'doeng', 'doej', 'doec',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'dyum', 'dyub', 'dyubs', 'dyus', 'dyuss', 'dyung', 'dyuj', 'dyuc', 'dyuk', 'dyut', 'dyup', 'dyuh', 'deu', 'deug', 'deugg', 'deugs',
   0xE0 => 'deun', 'deunj', 'deunh', 'deud', 'deul', 'deulg', 'deulm', 'deulb', 'deuls', 'deult', 'deulp', 'deulh', 'deum', 'deub', 'deubs', 'deus',
   0xF0 => 'deuss', 'deung', 'deuj', 'deuc', 'deuk', 'deut', 'deup', 'deuh', 'dyi', 'dyig', 'dyigg', 'dyigs', 'dyin', 'dyinj', 'dyinh', 'dyid',
-);
+];

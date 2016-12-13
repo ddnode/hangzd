@@ -16,10 +16,10 @@
  */
 ?>
 
-<div class="text"><?php print $title; ?></div>
+<div class="text"><?php echo $title; ?></div>
 <div class="bar">
-  <div style="width: <?php print $percentage; ?>%;" class="foreground"></div>
+  <div style="width: <?php echo $percentage; ?>%;" class="foreground"></div>
 </div>
 <div class="percent">
-  <?php print $percentage; ?>%
+  <?php echo $percentage; ?>%
 </div>

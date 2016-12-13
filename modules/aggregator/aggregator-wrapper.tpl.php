@@ -13,6 +13,6 @@
  */
 ?>
 <div id="aggregator">
-  <?php print $content; ?>
-  <?php print $pager; ?>
+  <?php echo $content; ?>
+  <?php echo $pager; ?>
 </div>

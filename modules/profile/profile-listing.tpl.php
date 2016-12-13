@@ -31,20 +31,19 @@
  *      <?php print $profile['last_name']->value; ?>
  *    </div>
  *  <?php endif; ?>
- *
  * @see template_preprocess_profile_listing()
  */
 ?>
 <div class="profile">
-  <?php print $picture; ?>
+  <?php echo $picture; ?>
 
   <div class="name">
-    <?php print $name; ?>
+    <?php echo $name; ?>
   </div>
 
   <?php foreach ($profile as $field) : ?>
     <div class="field">
-      <?php print $field->value; ?>
+      <?php echo $field->value; ?>
     </div>
   <?php endforeach; ?>
 

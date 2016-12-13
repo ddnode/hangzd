@@ -52,39 +52,39 @@
  * @see zen_process()
  */
 ?>
-<div class="<?php print $classes; ?> clearfix">
-  <?php print $picture; ?>
+<div class="<?php echo $classes; ?> clearfix">
+  <?php echo $picture; ?>
 
   <?php if ($title): ?>
     <h3 class="title">
-      <?php print $title; ?>
+      <?php echo $title; ?>
       <?php if ($new): ?>
-        <span class="new"><?php print $new; ?></span>
+        <span class="new"><?php echo $new; ?></span>
       <?php endif; ?>
     </h3>
   <?php elseif ($new): ?>
-    <div class="new"><?php print $new; ?></div>
+    <div class="new"><?php echo $new; ?></div>
   <?php endif; ?>
 
   <?php if ($unpublished): ?>
-    <div class="unpublished"><?php print t('Unpublished'); ?></div>
+    <div class="unpublished"><?php echo t('Unpublished'); ?></div>
   <?php endif; ?>
 
   <div class="submitted">
     <?php
-      print t('Submitted by !username on !datetime.',
-        array('!username' => $author, '!datetime' => $created));
+      echo t('Submitted by !username on !datetime.',
+        ['!username' => $author, '!datetime' => $created]);
     ?>
   </div>
 
   <div class="content">
-    <?php print $content; ?>
+    <?php echo $content; ?>
     <?php if ($signature): ?>
       <div class="user-signature clearfix">
-        <?php print $signature; ?>
+        <?php echo $signature; ?>
       </div>
     <?php endif; ?>
   </div>
 
-  <?php print $links; ?>
+  <?php echo $links; ?>
 </div><!-- /.comment -->

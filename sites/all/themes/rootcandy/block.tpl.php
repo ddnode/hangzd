@@ -25,12 +25,12 @@
  * @see template_preprocess_block()
  */
 ?>
-<div id="block-<?php print $block->module .'-'. $block->delta; ?>" class="block block-<?php print $block->module ?>">
+<div id="block-<?php echo $block->module.'-'.$block->delta; ?>" class="block block-<?php echo $block->module ?>">
 <?php if ($block->subject): ?>
-  <h2><?php print $block->subject ?></h2>
-<?php endif;?>
+  <h2><?php echo $block->subject ?></h2>
+<?php endif; ?>
 
   <div class="content">
-    <?php print $block->content ?>
+    <?php echo $block->content ?>
   </div>
 </div>

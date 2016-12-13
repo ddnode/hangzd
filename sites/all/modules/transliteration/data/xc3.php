@@ -1,7 +1,8 @@
 <?php
+
 // $Id: xc3.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'ssal', 'ssalg', 'ssalm', 'ssalb', 'ssals', 'ssalt', 'ssalp', 'ssalh', 'ssam', 'ssab', 'ssabs', 'ssas', 'ssass', 'ssang', 'ssaj', 'ssac',
   0x10 => 'ssak', 'ssat', 'ssap', 'ssah', 'ssae', 'ssaeg', 'ssaegg', 'ssaegs', 'ssaen', 'ssaenj', 'ssaenh', 'ssaed', 'ssael', 'ssaelg', 'ssaelm', 'ssaelb',
   0x20 => 'ssaels', 'ssaelt', 'ssaelp', 'ssaelh', 'ssaem', 'ssaeb', 'ssaebs', 'ssaes', 'ssaess', 'ssaeng', 'ssaej', 'ssaec', 'ssaek', 'ssaet', 'ssaep', 'ssaeh',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'ssyess', 'ssyeng', 'ssyej', 'ssyec', 'ssyek', 'ssyet', 'ssyep', 'ssyeh', 'sso', 'ssog', 'ssogg', 'ssogs', 'sson', 'ssonj', 'ssonh', 'ssod',
   0xE0 => 'ssol', 'ssolg', 'ssolm', 'ssolb', 'ssols', 'ssolt', 'ssolp', 'ssolh', 'ssom', 'ssob', 'ssobs', 'ssos', 'ssoss', 'ssong', 'ssoj', 'ssoc',
   0xF0 => 'ssok', 'ssot', 'ssop', 'ssoh', 'sswa', 'sswag', 'sswagg', 'sswags', 'sswan', 'sswanj', 'sswanh', 'sswad', 'sswal', 'sswalg', 'sswalm', 'sswalb',
-);
+];

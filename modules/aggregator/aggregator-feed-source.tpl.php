@@ -20,15 +20,15 @@
  */
 ?>
 <div class="feed-source">
-  <?php print $source_icon; ?>
-  <?php print $source_image; ?>
+  <?php echo $source_icon; ?>
+  <?php echo $source_image; ?>
   <div class="feed-description">
-    <?php print $source_description; ?>
+    <?php echo $source_description; ?>
   </div>
   <div class="feed-url">
-    <em><?php print t('URL:'); ?></em> <a href="<?php print $source_url; ?>"><?php print $source_url; ?></a>
+    <em><?php echo t('URL:'); ?></em> <a href="<?php echo $source_url; ?>"><?php echo $source_url; ?></a>
   </div>
   <div class="feed-updated">
-    <em><?php print t('Updated:'); ?></em> <?php print $last_checked; ?>
+    <em><?php echo t('Updated:'); ?></em> <?php echo $last_checked; ?>
   </div>
 </div>

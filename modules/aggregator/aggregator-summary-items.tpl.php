@@ -16,8 +16,8 @@
  * @see template_preprocess_aggregator_summary-items()
  */
 ?>
-<h2><?php print $title; ?></h2>
-<?php print $summary_list; ?>
+<h2><?php echo $title; ?></h2>
+<?php echo $summary_list; ?>
 <div class="links">
-  <a href="<?php print $source_url; ?>"><?php print t('More'); ?></a>
+  <a href="<?php echo $source_url; ?>"><?php echo t('More'); ?></a>
 </div>

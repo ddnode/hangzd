@@ -36,22 +36,22 @@
 /**
  * Hook to register the CKEditor plugin - it would appear in the plugins list on the profile setting page.
  */
-function hook_ckeditor_plugin() {
-  return array(
-    'plugin_name' => array(
+function hook_ckeditor_plugin()
+{
+    return [
+    'plugin_name' => [
       // Name of the plugin used to write it.
       'name' => 'plugin_name',
       // Description of the plugin - it would be displayed in the plugins management section of profile settings.
       'desc' => t('Plugin description'),
       // The full path to the CKEditor plugins directory, with the trailing slash.
-      'path' => drupal_get_path('module', 'my_module') . '/plugin_dir/',
-      'buttons' => array(
-        'button_name' => array(
-          'icon' => 'path to button icon',
+      'path'    => drupal_get_path('module', 'my_module').'/plugin_dir/',
+      'buttons' => [
+        'button_name' => [
+          'icon'  => 'path to button icon',
           'label' => 'Button Label',
-        )
-      )
-    )
-  );
+        ],
+      ],
+    ],
+  ];
 }
-?>

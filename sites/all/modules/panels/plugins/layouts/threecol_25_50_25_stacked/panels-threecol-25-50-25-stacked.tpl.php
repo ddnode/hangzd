@@ -17,30 +17,32 @@
  *   - $content['bottom']: Content in the bottom row.
  */
 ?>
-<div class="panel-display panel-3col-stacked clear-block" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+<div class="panel-display panel-3col-stacked clear-block" <?php if (!empty($css_id)) {
+    echo "id=\"$css_id\"";
+} ?>>
   <?php if ($content['top']): ?>
     <div class="panel-panel panel-col-top">
-      <div class="inside"><?php print $content['top']; ?></div>
+      <div class="inside"><?php echo $content['top']; ?></div>
     </div>    
   <?php endif ?>
 
   <div class="center-wrapper">
     <div class="panel-panel panel-col-first">
-      <div class="inside"><?php print $content['left']; ?></div>
+      <div class="inside"><?php echo $content['left']; ?></div>
     </div>
 
     <div class="panel-panel panel-col">
-      <div class="inside"><?php print $content['middle']; ?></div>
+      <div class="inside"><?php echo $content['middle']; ?></div>
     </div>
 
     <div class="panel-panel panel-col-last">
-      <div class="inside"><?php print $content['right']; ?></div>
+      <div class="inside"><?php echo $content['right']; ?></div>
     </div>
   </div>
 
   <?php if ($content['bottom']): ?>
     <div class="panel-panel panel-col-bottom">
-      <div class="inside"><?php print $content['bottom']; ?></div>
+      <div class="inside"><?php echo $content['bottom']; ?></div>
     </div>    
   <?php endif ?>
 </div>

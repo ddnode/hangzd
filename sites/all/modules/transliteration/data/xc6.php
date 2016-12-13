@@ -1,7 +1,8 @@
 <?php
+
 // $Id: xc6.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'yeoss', 'yeong', 'yeoj', 'yeoc', 'yeok', 'yeot', 'yeop', 'yeoh', 'ye', 'yeg', 'yegg', 'yegs', 'yen', 'yenj', 'yenh', 'yed',
   0x10 => 'yel', 'yelg', 'yelm', 'yelb', 'yels', 'yelt', 'yelp', 'yelh', 'yem', 'yeb', 'yebs', 'yes', 'yess', 'yeng', 'yej', 'yec',
   0x20 => 'yek', 'yet', 'yep', 'yeh', 'o', 'og', 'ogg', 'ogs', 'on', 'onj', 'onh', 'od', 'ol', 'olg', 'olm', 'olb',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'weon', 'weonj', 'weonh', 'weod', 'weol', 'weolg', 'weolm', 'weolb', 'weols', 'weolt', 'weolp', 'weolh', 'weom', 'weob', 'weobs', 'weos',
   0xE0 => 'weoss', 'weong', 'weoj', 'weoc', 'weok', 'weot', 'weop', 'weoh', 'we', 'weg', 'wegg', 'wegs', 'wen', 'wenj', 'wenh', 'wed',
   0xF0 => 'wel', 'welg', 'welm', 'welb', 'wels', 'welt', 'welp', 'welh', 'wem', 'web', 'webs', 'wes', 'wess', 'weng', 'wej', 'wec',
-);
+];

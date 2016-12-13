@@ -28,63 +28,63 @@
  * @ingroup views_templates
  */
 ?>
-<div class="<?php print $classes; ?>">
+<div class="<?php echo $classes; ?>">
   <?php if ($admin_links): ?>
     <div class="views-admin-links views-hide">
-      <?php print $admin_links; ?>
+      <?php echo $admin_links; ?>
     </div>
   <?php endif; ?>
   <?php if ($header): ?>
     <div class="view-header">
-      <?php print $header; ?>
+      <?php echo $header; ?>
     </div>
   <?php endif; ?>
 
   <?php if ($exposed): ?>
     <div class="view-filters">
-      <?php print $exposed; ?>
+      <?php echo $exposed; ?>
     </div>
   <?php endif; ?>
 
   <?php if ($attachment_before): ?>
     <div class="attachment attachment-before">
-      <?php print $attachment_before; ?>
+      <?php echo $attachment_before; ?>
     </div>
   <?php endif; ?>
 
   <?php if ($rows): ?>
     <div class="view-content">
-      <?php print $rows; ?>
+      <?php echo $rows; ?>
     </div>
   <?php elseif ($empty): ?>
     <div class="view-empty">
-      <?php print $empty; ?>
+      <?php echo $empty; ?>
     </div>
   <?php endif; ?>
 
   <?php if ($pager): ?>
-    <?php print $pager; ?>
+    <?php echo $pager; ?>
   <?php endif; ?>
 
   <?php if ($attachment_after): ?>
     <div class="attachment attachment-after">
-      <?php print $attachment_after; ?>
+      <?php echo $attachment_after; ?>
     </div>
   <?php endif; ?>
 
   <?php if ($more): ?>
-    <?php print $more; ?>
+    <?php echo $more; ?>
   <?php endif; ?>
 
   <?php if ($footer): ?>
     <div class="view-footer">
-      <?php print $footer; ?>
+      <?php echo $footer; ?>
     </div>
   <?php endif; ?>
 
   <?php if ($feed_icon): ?>
     <div class="feed-icon">
-      <?php print $feed_icon; ?>
+      <?php echo $feed_icon; ?>
     </div>
   <?php endif; ?>
 

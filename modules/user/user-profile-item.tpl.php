@@ -18,9 +18,8 @@
  * - $title: Field title for the profile item.
  * - $value: User defined value for the profile item or data from a module.
  * - $attributes: HTML attributes. Usually renders classes.
- *
  * @see template_preprocess_user_profile_item()
  */
 ?>
-<dt<?php print $attributes; ?>><?php print $title; ?></dt>
-<dd<?php print $attributes; ?>><?php print $value; ?></dd>
+<dt<?php echo $attributes; ?>><?php echo $title; ?></dt>
+<dd<?php echo $attributes; ?>><?php echo $value; ?></dd>

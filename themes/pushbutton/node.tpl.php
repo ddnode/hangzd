@@ -1,14 +1,18 @@
 <?php
 ?>
-<div class="node<?php if ($sticky) { print " sticky"; } ?><?php if (!$status) { print " node-unpublished"; } ?>">
-  <?php print $picture ?>
+<div class="node<?php if ($sticky) {
+    echo ' sticky';
+} ?><?php if (!$status) {
+    echo ' node-unpublished';
+} ?>">
+  <?php echo $picture ?>
   <?php if ($page == 0): ?>
-    <h1 class="title"><a href="<?php print $node_url ?>"><?php print $title ?></a></h1>
+    <h1 class="title"><a href="<?php echo $node_url ?>"><?php echo $title ?></a></h1>
   <?php endif; ?>
-    <span class="submitted"><?php print $submitted ?></span>
-    <div class="taxonomy"><?php print $terms ?></div>
-    <div class="content"><?php print $content ?></div>
+    <span class="submitted"><?php echo $submitted ?></span>
+    <div class="taxonomy"><?php echo $terms ?></div>
+    <div class="content"><?php echo $content ?></div>
     <?php if ($links): ?>
-    <div class="links">&raquo; <?php print $links ?></div>
+    <div class="links">&raquo; <?php echo $links ?></div>
     <?php endif; ?>
 </div>

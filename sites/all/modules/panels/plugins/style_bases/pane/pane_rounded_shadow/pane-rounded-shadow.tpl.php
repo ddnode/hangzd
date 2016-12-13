@@ -11,7 +11,7 @@
  * - $content: The content being rendered (will be already in $output)
  */
 ?>
-<div class="rounded-shadow <?php print $classes ?>">
+<div class="rounded-shadow <?php echo $classes ?>">
   <div class="rounded-shadow-background">
     <div class="rounded-shadow-wrap-corner">
       <div class="rounded-shadow-top-edge">
@@ -20,7 +20,7 @@
       </div>
       <div class="rounded-shadow-left-edge">
         <div class="rounded-shadow-right-edge clear-block">
-          <?php print $output; ?>
+          <?php echo $output; ?>
         </div>
       </div>
       <div class="rounded-shadow-bottom-edge">

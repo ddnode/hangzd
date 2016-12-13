@@ -32,30 +32,30 @@
  * @see theme_forum_topic_list()
  */
 ?>
-<table id="forum-topic-<?php print $topic_id; ?>">
+<table id="forum-topic-<?php echo $topic_id; ?>">
   <thead>
-    <tr><?php print $header; ?></tr>
+    <tr><?php echo $header; ?></tr>
   </thead>
   <tbody>
   <?php foreach ($topics as $topic): ?>
-    <tr class="<?php print $topic->zebra;?>">
-      <td class="icon"><?php print $topic->icon; ?></td>
-      <td class="title"><?php print $topic->title; ?></td>
+    <tr class="<?php echo $topic->zebra; ?>">
+      <td class="icon"><?php echo $topic->icon; ?></td>
+      <td class="title"><?php echo $topic->title; ?></td>
     <?php if ($topic->moved): ?>
-      <td colspan="3"><?php print $topic->message; ?></td>
+      <td colspan="3"><?php echo $topic->message; ?></td>
     <?php else: ?>
       <td class="replies">
-        <?php print $topic->num_comments; ?>
+        <?php echo $topic->num_comments; ?>
         <?php if ($topic->new_replies): ?>
           <br />
-          <a href="<?php print $topic->new_url; ?>"><?php print $topic->new_text; ?></a>
+          <a href="<?php echo $topic->new_url; ?>"><?php echo $topic->new_text; ?></a>
         <?php endif; ?>
       </td>
-      <td class="created"><?php print $topic->created; ?></td>
-      <td class="last-reply"><?php print $topic->last_reply; ?></td>
+      <td class="created"><?php echo $topic->created; ?></td>
+      <td class="last-reply"><?php echo $topic->last_reply; ?></td>
     <?php endif; ?>
     </tr>
   <?php endforeach; ?>
   </tbody>
 </table>
-<?php print $pager; ?>
+<?php echo $pager; ?>

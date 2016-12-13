@@ -13,18 +13,18 @@
  */
 ?>
 
-<div class="skin-<?php print $skin; ?>">
+<div class="skin-<?php echo $skin; ?>">
   <?php if (!empty($top_widget_rendered)): ?>
     <div class="views-slideshow-controls-top clear-block">
-      <?php print $top_widget_rendered; ?>
+      <?php echo $top_widget_rendered; ?>
     </div>
   <?php endif; ?>
 
-  <?php print $slideshow; ?>
+  <?php echo $slideshow; ?>
 
   <?php if (!empty($bottom_widget_rendered)): ?>
     <div class="views-slideshow-controls-bottom clear-block">
-      <?php print $bottom_widget_rendered; ?>
+      <?php echo $bottom_widget_rendered; ?>
     </div>
   <?php endif; ?>
 </div>

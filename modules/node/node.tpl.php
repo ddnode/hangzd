@@ -47,27 +47,31 @@
  * @see template_preprocess_node()
  */
 ?>
-<div id="node-<?php print $node->nid; ?>" class="node<?php if ($sticky) { print ' sticky'; } ?><?php if (!$status) { print ' node-unpublished'; } ?> clear-block">
+<div id="node-<?php echo $node->nid; ?>" class="node<?php if ($sticky) {
+    echo ' sticky';
+} ?><?php if (!$status) {
+    echo ' node-unpublished';
+} ?> clear-block">
 
-<?php print $picture ?>
+<?php echo $picture ?>
 
 <?php if (!$page): ?>
-  <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
+  <h2><a href="<?php echo $node_url ?>" title="<?php echo $title ?>"><?php echo $title ?></a></h2>
 <?php endif; ?>
 
   <div class="meta">
   <?php if ($submitted): ?>
-    <span class="submitted"><?php print $submitted ?></span>
+    <span class="submitted"><?php echo $submitted ?></span>
   <?php endif; ?>
 
   <?php if ($terms): ?>
-    <div class="terms terms-inline"><?php print $terms ?></div>
-  <?php endif;?>
+    <div class="terms terms-inline"><?php echo $terms ?></div>
+  <?php endif; ?>
   </div>
 
   <div class="content">
-    <?php print $content ?>
+    <?php echo $content ?>
   </div>
 
-  <?php print $links; ?>
+  <?php echo $links; ?>
 </div>

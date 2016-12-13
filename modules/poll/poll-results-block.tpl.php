@@ -19,10 +19,10 @@
 ?>
 
 <div class="poll">
-  <div class="title"><?php print $title ?></div>
-  <?php print $results ?>
+  <div class="title"><?php echo $title ?></div>
+  <?php echo $results ?>
   <div class="total">
-    <?php print t('Total votes: @votes', array('@votes' => $votes)); ?>
+    <?php echo t('Total votes: @votes', ['@votes' => $votes]); ?>
   </div>
 </div>
-<div class="links"><?php print $links; ?></div>
+<div class="links"><?php echo $links; ?></div>

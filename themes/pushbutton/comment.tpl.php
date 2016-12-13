@@ -1,21 +1,21 @@
 <?php
 ?>
-<div class="comment<?php print ' '. $status; ?>">
+<div class="comment<?php echo ' '.$status; ?>">
   <?php if ($picture) : ?>
-    <?php print $picture ?>
+    <?php echo $picture ?>
   <?php endif; ?>
-  <h3 class="title"><?php print $title ?></h3>
-  <div class="submitted"><?php print $submitted ?><?php if ($comment->new) : ?><span class="new"> *<?php print $new ?></span><?php endif; ?></div>
+  <h3 class="title"><?php echo $title ?></h3>
+  <div class="submitted"><?php echo $submitted ?><?php if ($comment->new) : ?><span class="new"> *<?php echo $new ?></span><?php endif; ?></div>
   <div class="content">
-    <?php print $content ?>
+    <?php echo $content ?>
     <?php if ($signature): ?>
       <div class="clear-block">
         <div>—</div>
-        <?php print $signature ?>
+        <?php echo $signature ?>
       </div>
     <?php endif; ?>
   </div>
   <!-- BEGIN: links -->
-  <div class="links">&raquo; <?php print $links ?></div>
+  <div class="links">&raquo; <?php echo $links ?></div>
   <!-- END: links -->
 </div>

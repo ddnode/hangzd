@@ -17,7 +17,7 @@
   <a name="new">
 <?php endif; ?>
 
-<?php print theme('image', "misc/forum-$icon.png") ?>
+<?php echo theme('image', "misc/forum-$icon.png") ?>
 
 <?php if ($new_posts): ?>
   </a>

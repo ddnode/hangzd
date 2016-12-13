@@ -53,14 +53,14 @@
  * @see zen_process()
  */
 ?>
-<div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>">
+<div id="<?php echo $block_html_id; ?>" class="<?php echo $classes; ?>">
   <?php if ($title): ?>
-    <h2 class="title"><?php print $title; ?></h2>
+    <h2 class="title"><?php echo $title; ?></h2>
   <?php endif; ?>
 
   <div class="content">
-    <?php print $content; ?>
+    <?php echo $content; ?>
   </div>
 
-  <?php print $edit_links; ?>
+  <?php echo $edit_links; ?>
 </div><!-- /.block -->

@@ -16,11 +16,10 @@
  *   search-result.tpl.php
  * - $type: The type of search, e.g., "node" or "user".
  *
- *
  * @see template_preprocess_search_results()
  */
 ?>
-<dl class="search-results <?php print $type; ?>-results">
-  <?php print $search_results; ?>
+<dl class="search-results <?php echo $type; ?>-results">
+  <?php echo $search_results; ?>
 </dl>
-<?php print $pager; ?>
+<?php echo $pager; ?>

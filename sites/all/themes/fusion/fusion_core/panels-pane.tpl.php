@@ -19,41 +19,40 @@
 
 /**
  * $skinr variable, <div class="inner">, and 'content' in
- * <div class="pane-content content"> added for Fusion theming
+ * <div class="pane-content content"> added for Fusion theming.
  */
-
 ?>
-<div class="<?php print $classes; ?> <?php print $skinr; ?>" <?php print $id; ?>>
+<div class="<?php echo $classes; ?> <?php echo $skinr; ?>" <?php echo $id; ?>>
   <div class="inner">
     <?php if ($admin_links): ?>
       <div class="admin-links panel-hide">
-        <?php print $admin_links; ?>
+        <?php echo $admin_links; ?>
       </div>
     <?php endif; ?>
 
     <?php if ($title): ?>
-      <h2 class="pane-title block-title"><?php print $title; ?></h2>
+      <h2 class="pane-title block-title"><?php echo $title; ?></h2>
     <?php endif; ?>
 
     <?php if ($feeds): ?>
       <div class="feed">
-        <?php print $feeds; ?>
+        <?php echo $feeds; ?>
       </div>
     <?php endif; ?>
 
     <div class="pane-content content">
-      <?php print $content; ?>
+      <?php echo $content; ?>
     </div>
 
     <?php if ($links): ?>
       <div class="links">
-        <?php print $links; ?>
+        <?php echo $links; ?>
       </div>
     <?php endif; ?>
 
     <?php if ($more): ?>
       <div class="more-link">
-        <?php print $more; ?>
+        <?php echo $more; ?>
       </div>
     <?php endif; ?>
   </div>

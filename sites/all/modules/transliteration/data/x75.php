@@ -1,7 +1,8 @@
 <?php
+
 // $Id: x75.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'Zhui ', 'Ping ', 'Bian ', 'Zhou ', 'Zhen ', 'Senchigura ', 'Ci ', 'Ying ', 'Qi ', 'Xian ', 'Lou ', 'Di ', 'Ou ', 'Meng ', 'Zhuan ', 'Peng ',
   0x10 => 'Lin ', 'Zeng ', 'Wu ', 'Pi ', 'Dan ', 'Weng ', 'Ying ', 'Yan ', 'Gan ', 'Dai ', 'Shen ', 'Tian ', 'Tian ', 'Han ', 'Chang ', 'Sheng ',
   0x20 => 'Qing ', 'Sheng ', 'Chan ', 'Chan ', 'Rui ', 'Sheng ', 'Su ', 'Sen ', 'Yong ', 'Shuai ', 'Lu ', 'Fu ', 'Yong ', 'Beng ', 'Feng ', 'Ning ',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'Hui ', 'Duo ', 'Yang ', 'Chi ', 'Zhi ', 'Hen ', 'Ya ', 'Mei ', 'Dou ', 'Jing ', 'Xiao ', 'Tong ', 'Tu ', 'Mang ', 'Pi ', 'Xiao ',
   0xE0 => 'Suan ', 'Pu ', 'Li ', 'Zhi ', 'Cuo ', 'Duo ', 'Wu ', 'Sha ', 'Lao ', 'Shou ', 'Huan ', 'Xian ', 'Yi ', 'Peng ', 'Zhang ', 'Guan ',
   0xF0 => 'Tan ', 'Fei ', 'Ma ', 'Lin ', 'Chi ', 'Ji ', 'Dian ', 'An ', 'Chi ', 'Bi ', 'Bei ', 'Min ', 'Gu ', 'Dui ', 'E ', 'Wei ',
-);
+];

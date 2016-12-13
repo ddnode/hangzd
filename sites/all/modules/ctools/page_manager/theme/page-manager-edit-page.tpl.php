@@ -11,29 +11,29 @@
  */
 ?>
 <div id="page-manager-edit">
-  <?php print $locked; ?>
+  <?php echo $locked; ?>
   <div class="page-manager-wrapper">
     <?php if (isset($operations['primary'])): ?>
       <div class="primary-actions clear-block actions">
-        <?php print $operations['primary']; ?>
+        <?php echo $operations['primary']; ?>
       </div>
     <?php endif; ?>
     <div class="page-manager-tabs clear-block">
       <div class="page-manager-edit-operations">
         <div class="inside">
-          <?php print $operations['nav']; ?>
+          <?php echo $operations['nav']; ?>
         </div>
       </div>
       <div class="page-manager-ajax-pad">
         <div class="inside">
           <div class="content-header">
             <div class="content-title">
-              <?php print $changed; ?>
-              <?php print $content['title']; ?>
+              <?php echo $changed; ?>
+              <?php echo $content['title']; ?>
             </div>
             <?php if (isset($operations['secondary'])): ?>
               <div class="secondary-actions clear-block actions">
-                <?php print $operations['secondary']; ?>
+                <?php echo $operations['secondary']; ?>
               </div>
             <?php endif; ?>
           </div>
@@ -41,14 +41,14 @@
           <div class="content-content">
             <?php if (!empty($content['description'])): ?>
               <div class="description">
-                <?php print $content['description']; ?>
+                <?php echo $content['description']; ?>
               </div>
               <?php endif; ?>
-            <?php print $content['content']; ?>
+            <?php echo $content['content']; ?>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <?php print $save; ?>
+  <?php echo $save; ?>
 </div>

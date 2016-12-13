@@ -7,10 +7,10 @@
  */
 ?>
 <?php if (!empty($title)): ?>
-  <h3><?php print $title; ?></h3>
+  <h3><?php echo $title; ?></h3>
 <?php endif; ?>
 <?php foreach ($rows as $id => $row): ?>
-  <div class="<?php print $classes[$id]; ?>">
-    <?php print $row; ?>
+  <div class="<?php echo $classes[$id]; ?>">
+    <?php echo $row; ?>
   </div>
 <?php endforeach; ?>

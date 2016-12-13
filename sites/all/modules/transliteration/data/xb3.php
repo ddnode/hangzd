@@ -1,7 +1,8 @@
 <?php
+
 // $Id: xb3.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'dae', 'daeg', 'daegg', 'daegs', 'daen', 'daenj', 'daenh', 'daed', 'dael', 'daelg', 'daelm', 'daelb', 'daels', 'daelt', 'daelp', 'daelh',
   0x10 => 'daem', 'daeb', 'daebs', 'daes', 'daess', 'daeng', 'daej', 'daec', 'daek', 'daet', 'daep', 'daeh', 'dya', 'dyag', 'dyagg', 'dyags',
   0x20 => 'dyan', 'dyanj', 'dyanh', 'dyad', 'dyal', 'dyalg', 'dyalm', 'dyalb', 'dyals', 'dyalt', 'dyalp', 'dyalh', 'dyam', 'dyab', 'dyabs', 'dyas',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'dols', 'dolt', 'dolp', 'dolh', 'dom', 'dob', 'dobs', 'dos', 'doss', 'dong', 'doj', 'doc', 'dok', 'dot', 'dop', 'doh',
   0xE0 => 'dwa', 'dwag', 'dwagg', 'dwags', 'dwan', 'dwanj', 'dwanh', 'dwad', 'dwal', 'dwalg', 'dwalm', 'dwalb', 'dwals', 'dwalt', 'dwalp', 'dwalh',
   0xF0 => 'dwam', 'dwab', 'dwabs', 'dwas', 'dwass', 'dwang', 'dwaj', 'dwac', 'dwak', 'dwat', 'dwap', 'dwah', 'dwae', 'dwaeg', 'dwaegg', 'dwaegs',
-);
+];

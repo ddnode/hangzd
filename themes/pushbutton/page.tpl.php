@@ -1,36 +1,36 @@
 <?php
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language->language ?>" xml:lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo $language->language ?>" xml:lang="<?php echo $language->language ?>" dir="<?php echo $language->dir ?>">
 <head>
   <meta http-equiv="Content-Style-Type" content="text/css" />
-  <?php print $head ?>
-  <title><?php print $head_title ?></title>
-  <?php print $styles ?>
-  <?php print $scripts ?>
+  <?php echo $head ?>
+  <title><?php echo $head_title ?></title>
+  <?php echo $styles ?>
+  <?php echo $scripts ?>
 </head>
 
 <body>
 
-<div class="hide"><a href="#content" title="<?php print t('Skip navigation') ?>." accesskey="2"><?php print t('Skip navigation') ?></a>.</div>
+<div class="hide"><a href="#content" title="<?php echo t('Skip navigation') ?>." accesskey="2"><?php echo t('Skip navigation') ?></a>.</div>
 
 <table id="primary-menu" summary="Navigation elements." border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
     <td id="home" width="10%">
       <?php if ($logo) : ?>
-        <a href="<?php print $front_page ?>" title="<?php print t('Home') ?>"><img src="<?php print($logo) ?>" alt="<?php print t('Home') ?>" border="0" /></a>
+        <a href="<?php echo $front_page ?>" title="<?php echo t('Home') ?>"><img src="<?php echo $logo ?>" alt="<?php echo t('Home') ?>" border="0" /></a>
       <?php endif; ?>
     </td>
 
     <td id="site-info" width="20%">
       <?php if ($site_name) : ?>
-        <div class='site-name'><a href="<?php print $front_page ?>" title="<?php print t('Home') ?>"><?php print($site_name) ?></a></div>
-      <?php endif;?>
+        <div class='site-name'><a href="<?php echo $front_page ?>" title="<?php echo t('Home') ?>"><?php echo $site_name ?></a></div>
+      <?php endif; ?>
       <?php if ($site_slogan) : ?>
-        <div class='site-slogan'><?php print($site_slogan) ?></div>
-      <?php endif;?>
+        <div class='site-slogan'><?php echo $site_slogan ?></div>
+      <?php endif; ?>
     </td>
     <td class="primary-links" width="70%" align="center" valign="middle">
-      <?php print theme('links', $primary_links, array('class' => 'links', 'id' => 'navlist')) ?>
+      <?php echo theme('links', $primary_links, ['class' => 'links', 'id' => 'navlist']) ?>
     </td>
   </tr>
 </table>
@@ -38,59 +38,59 @@
 <table id="secondary-menu" summary="Navigation elements." border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
     <td class="secondary-links" width="75%"  align="center" valign="middle">
-      <?php print theme('links', $secondary_links, array('class' => 'links', 'id' => 'subnavlist')) ?>
+      <?php echo theme('links', $secondary_links, ['class' => 'links', 'id' => 'subnavlist']) ?>
     </td>
     <td width="25%" align="center" valign="middle">
-      <?php print $search_box ?>
+      <?php echo $search_box ?>
     </td>
   </tr>
   <tr>
-    <td colspan="2"><div><?php print $header ?></div></td>
+    <td colspan="2"><div><?php echo $header ?></div></td>
   </tr>
 </table>
 
 <table id="content" border="0" cellpadding="15" cellspacing="0" width="100%">
   <tr>
-    <?php if ($left != ""): ?>
+    <?php if ($left != ''): ?>
     <td id="sidebar-left">
-      <?php print $left ?>
+      <?php echo $left ?>
     </td>
     <?php endif; ?>
 
     <td valign="top">
-      <?php if ($mission != ""): ?>
-      <div id="mission"><?php print $mission ?></div>
+      <?php if ($mission != ''): ?>
+      <div id="mission"><?php echo $mission ?></div>
       <?php endif; ?>
 
       <div id="main">
-        <?php if ($title != ""): ?>
-          <?php print $breadcrumb ?>
-          <h1 class="title"><?php print $title ?></h1>
+        <?php if ($title != ''): ?>
+          <?php echo $breadcrumb ?>
+          <h1 class="title"><?php echo $title ?></h1>
 
-          <?php if ($tabs != ""): ?>
-            <div class="tabs"><?php print $tabs ?></div>
+          <?php if ($tabs != ''): ?>
+            <div class="tabs"><?php echo $tabs ?></div>
           <?php endif; ?>
 
         <?php endif; ?>
 
-        <?php if ($show_messages && $messages != ""): ?>
-          <?php print $messages ?>
+        <?php if ($show_messages && $messages != ''): ?>
+          <?php echo $messages ?>
         <?php endif; ?>
 
-        <?php if ($help != ""): ?>
-            <div id="help"><?php print $help ?></div>
+        <?php if ($help != ''): ?>
+            <div id="help"><?php echo $help ?></div>
         <?php endif; ?>
 
       <!-- start main content -->
-      <?php print $content; ?>
-      <?php print $feed_icons; ?>
+      <?php echo $content; ?>
+      <?php echo $feed_icons; ?>
       <!-- end main content -->
 
       </div><!-- main -->
     </td>
-    <?php if ($right != ""): ?>
+    <?php if ($right != ''): ?>
     <td id="sidebar-right">
-      <?php print $right ?>
+      <?php echo $right ?>
     </td>
     <?php endif; ?>
   </tr>
@@ -100,10 +100,10 @@
   <tr>
     <td align="center" valign="middle">
     <?php if (isset($primary_links)) : ?>
-      <?php print theme('links', $primary_links, array('class' => 'links primary-links')) ?>
+      <?php echo theme('links', $primary_links, ['class' => 'links primary-links']) ?>
     <?php endif; ?>
     <?php if (isset($secondary_links)) : ?>
-      <?php print theme('links', $secondary_links, array('class' => 'links secondary-links')) ?>
+      <?php echo theme('links', $secondary_links, ['class' => 'links secondary-links']) ?>
     <?php endif; ?>
     </td>
   </tr>
@@ -111,9 +111,9 @@
 
 <?php if ($footer_message || $footer) : ?>
 <div id="footer-message">
-    <?php print $footer_message . $footer;?>
+    <?php echo $footer_message.$footer; ?>
 </div>
 <?php endif; ?>
-<?php print $closure;?>
+<?php echo $closure; ?>
 </body>
 </html>

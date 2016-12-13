@@ -9,11 +9,13 @@
  */
 ?>
 <?php foreach ($rows as $id => $row): ?>
-  <?php print (!empty($options['inline']) ? '<span' : '<div') . ' class="views-summary views-summary-unformatted">'; ?>
-    <?php if (!empty($row->separator)) { print $row->separator; } ?>
-    <a href="<?php print $row->url; ?>"<?php print !empty($classes[$id]) ? ' class="'. $classes[$id] .'"' : ''; ?>><?php print $row->link; ?></a>
+  <?php echo(!empty($options['inline']) ? '<span' : '<div').' class="views-summary views-summary-unformatted">'; ?>
+    <?php if (!empty($row->separator)) {
+    echo $row->separator;
+} ?>
+    <a href="<?php echo $row->url; ?>"<?php echo !empty($classes[$id]) ? ' class="'.$classes[$id].'"' : ''; ?>><?php echo $row->link; ?></a>
     <?php if (!empty($options['count'])): ?>
-      (<?php print $row->count; ?>)
+      (<?php echo $row->count; ?>)
     <?php endif; ?>
-  <?php print !empty($options['inline']) ? '</span>' : '</div>'; ?>
+  <?php echo !empty($options['inline']) ? '</span>' : '</div>'; ?>
 <?php endforeach; ?>

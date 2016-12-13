@@ -26,6 +26,6 @@
  * @see zen_process()
  */
 ?>
-<div class="<?php print $classes; ?>">
-  <?php print $content; ?>
+<div class="<?php echo $classes; ?>">
+  <?php echo $content; ?>
 </div><!-- /.region -->

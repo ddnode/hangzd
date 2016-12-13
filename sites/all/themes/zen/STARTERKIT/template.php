@@ -60,12 +60,12 @@
  *   and http://drupal.org/node/190815#template-suggestions
  */
 
-
 /**
  * Implementation of HOOK_theme().
  */
-function STARTERKIT_theme(&$existing, $type, $theme, $path) {
-  $hooks = zen_theme($existing, $type, $theme, $path);
+function STARTERKIT_theme(&$existing, $type, $theme, $path)
+{
+    $hooks = zen_theme($existing, $type, $theme, $path);
   // Add your theme hooks like this:
   /*
   $hooks['hook_name_here'] = array( // Details go here );
@@ -74,7 +74,7 @@ function STARTERKIT_theme(&$existing, $type, $theme, $path) {
   return $hooks;
 }
 
-/**
+/*
  * Override or insert variables into all templates.
  *
  * @param $vars
@@ -88,7 +88,7 @@ function STARTERKIT_preprocess(&$vars, $hook) {
 }
 // */
 
-/**
+/*
  * Override or insert variables into the page templates.
  *
  * @param $vars
@@ -105,7 +105,7 @@ function STARTERKIT_preprocess_page(&$vars, $hook) {
 }
 // */
 
-/**
+/*
  * Override or insert variables into the node templates.
  *
  * @param $vars
@@ -126,7 +126,7 @@ function STARTERKIT_preprocess_node(&$vars, $hook) {
 }
 // */
 
-/**
+/*
  * Override or insert variables into the comment templates.
  *
  * @param $vars
@@ -140,7 +140,7 @@ function STARTERKIT_preprocess_comment(&$vars, $hook) {
 }
 // */
 
-/**
+/*
  * Override or insert variables into the block templates.
  *
  * @param $vars

@@ -1,7 +1,8 @@
 <?php
+
 // $Id: x01.php,v 1.4 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'A', 'a', 'A', 'a', 'A', 'a', 'C', 'c', 'C', 'c', 'C', 'c', 'C', 'c', 'D', 'd',
   0x10 => 'D', 'd', 'E', 'e', 'E', 'e', 'E', 'e', 'E', 'e', 'E', 'e', 'G', 'g', 'G', 'g',
   0x20 => 'G', 'g', 'G', 'g', 'H', 'h', 'H', 'h', 'I', 'i', 'I', 'i', 'I', 'i', 'I', 'i',
@@ -18,10 +19,10 @@ $base = array(
   0xD0 => 'i', 'O', 'o', 'U', 'u', 'U', 'u', 'U', 'u', 'U', 'u', 'U', 'u', '@', 'A', 'a',
   0xE0 => 'A', 'a', 'AE', 'ae', 'G', 'g', 'G', 'g', 'K', 'k', 'O', 'o', 'O', 'o', 'ZH', 'zh',
   0xF0 => 'j', 'DZ', 'D', 'dz', 'G', 'g', 'HV', 'W', 'N', 'n', 'A', 'a', 'AE', 'ae', 'O', 'o',
-);
+];
 
 // Overrides for Esperanto input.
-$variant['eo'] = array(
+$variant['eo'] = [
   0x08 => 'Cx',
   0x09 => 'cx',
   0x1C => 'Gx',
@@ -34,4 +35,4 @@ $variant['eo'] = array(
   0x5D => 'sx',
   0x6C => 'Ux',
   0x6D => 'ux',
-);
+];

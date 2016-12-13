@@ -15,14 +15,16 @@
  */
 ?>
 
-<div class="panel-display zen-one-sidebar-second clear-block" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+<div class="panel-display zen-one-sidebar-second clear-block" <?php if (!empty($css_id)) {
+    echo "id=\"$css_id\"";
+} ?>>
 
   <div class="panel-content"><div class="panel-content-inner inside panel-panel">
-    <?php print $content['content']; ?>
+    <?php echo $content['content']; ?>
   </div></div> <!-- /.panel-content-inner, /.panel-content -->
 
   <div class="panel-sidebar-first"><div class="panel-sidebar-first-inner inside panel-panel">
-    <?php print $content['sidebar_first']; ?>
+    <?php echo $content['sidebar_first']; ?>
   </div></div> <!-- /.panel-sidebar-first-inner, /.panel-sidebar-first -->
 
 </div> <!-- /.zen-one-sidebar-second -->

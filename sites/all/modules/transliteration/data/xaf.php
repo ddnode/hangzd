@@ -1,7 +1,8 @@
 <?php
+
 // $Id: xaf.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'ggyeols', 'ggyeolt', 'ggyeolp', 'ggyeolh', 'ggyeom', 'ggyeob', 'ggyeobs', 'ggyeos', 'ggyeoss', 'ggyeong', 'ggyeoj', 'ggyeoc', 'ggyeok', 'ggyeot', 'ggyeop', 'ggyeoh',
   0x10 => 'ggye', 'ggyeg', 'ggyegg', 'ggyegs', 'ggyen', 'ggyenj', 'ggyenh', 'ggyed', 'ggyel', 'ggyelg', 'ggyelm', 'ggyelb', 'ggyels', 'ggyelt', 'ggyelp', 'ggyelh',
   0x20 => 'ggyem', 'ggyeb', 'ggyebs', 'ggyes', 'ggyess', 'ggyeng', 'ggyej', 'ggyec', 'ggyek', 'ggyet', 'ggyep', 'ggyeh', 'ggo', 'ggog', 'ggogg', 'ggogs',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'gguk', 'ggut', 'ggup', 'gguh', 'ggweo', 'ggweog', 'ggweogg', 'ggweogs', 'ggweon', 'ggweonj', 'ggweonh', 'ggweod', 'ggweol', 'ggweolg', 'ggweolm', 'ggweolb',
   0xE0 => 'ggweols', 'ggweolt', 'ggweolp', 'ggweolh', 'ggweom', 'ggweob', 'ggweobs', 'ggweos', 'ggweoss', 'ggweong', 'ggweoj', 'ggweoc', 'ggweok', 'ggweot', 'ggweop', 'ggweoh',
   0xF0 => 'ggwe', 'ggweg', 'ggwegg', 'ggwegs', 'ggwen', 'ggwenj', 'ggwenh', 'ggwed', 'ggwel', 'ggwelg', 'ggwelm', 'ggwelb', 'ggwels', 'ggwelt', 'ggwelp', 'ggwelh',
-);
+];

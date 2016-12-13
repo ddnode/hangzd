@@ -11,24 +11,24 @@
  */
 ?>
 <?php if (!empty($title)) : ?>
-  <h3><?php print $title; ?></h3>
+  <h3><?php echo $title; ?></h3>
 <?php endif; ?>
-<table class="<?php print $class; ?>"<?php print $attributes; ?>>
+<table class="<?php echo $class; ?>"<?php echo $attributes; ?>>
   <tbody>
     <?php foreach ($rows as $row_number => $columns): ?>
       <?php
-        $row_class = 'row-' . ($row_number + 1);
+        $row_class = 'row-'.($row_number + 1);
         if ($row_number == 0) {
-          $row_class .= ' row-first';
+            $row_class .= ' row-first';
         }
         if (count($rows) == ($row_number + 1)) {
-          $row_class .= ' row-last';
+            $row_class .= ' row-last';
         }
       ?>
-      <tr class="<?php print $row_class; ?>">
+      <tr class="<?php echo $row_class; ?>">
         <?php foreach ($columns as $column_number => $item): ?>
-          <td class="<?php print $column_classes[$row_number][$column_number]; ?>">
-            <?php print $item; ?>
+          <td class="<?php echo $column_classes[$row_number][$column_number]; ?>">
+            <?php echo $item; ?>
           </td>
         <?php endforeach; ?>
       </tr>

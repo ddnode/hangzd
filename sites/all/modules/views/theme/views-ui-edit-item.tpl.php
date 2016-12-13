@@ -5,40 +5,42 @@
  * This template handles the printing of fields/filters/sort criteria/arguments or relationships.
  */
 ?>
-<?php print $rearrange; ?>
-<?php print $add; ?>
+<?php echo $rearrange; ?>
+<?php echo $add; ?>
 <div class="views-category-title<?php
   if ($overridden) {
-    print ' overridden';
+      echo ' overridden';
   }
   if ($defaulted) {
-    print ' defaulted';
+      echo ' defaulted';
   }
   ?>">
-  <?php print $item_help_icon; ?>
-  <?php print $title; ?>
+  <?php echo $item_help_icon; ?>
+  <?php echo $title; ?>
 </div>
 
 <div class="views-category-content<?php
   if ($overridden) {
-    print ' overridden';
+      echo ' overridden';
   }
   if ($defaulted) {
-    print ' defaulted';
+      echo ' defaulted';
   }
   ?>">
   <?php if (!empty($no_fields)): ?>
-    <div><?php print t('The style selected does not utilize fields.'); ?></div>
+    <div><?php echo t('The style selected does not utilize fields.'); ?></div>
   <?php elseif (empty($fields)): ?>
-    <div><?php print t('None defined'); ?></div>
+    <div><?php echo t('None defined'); ?></div>
   <?php else: ?>
     <?php foreach ($fields as $pid => $field): ?>
       <?php if (!empty($field['links'])): ?>
-        <?php print $field['links']; ?>
+        <?php echo $field['links']; ?>
       <?php endif; ?>
-      <div class="<?php print $field['class']; if (!empty($field['changed'])) { print ' changed'; } ?>">
-        <?php print $field['title']; ?>
-        <?php print $field['info']; ?>
+      <div class="<?php echo $field['class']; if (!empty($field['changed'])) {
+      echo ' changed';
+  } ?>">
+        <?php echo $field['title']; ?>
+        <?php echo $field['info']; ?>
       </div>
     <?php endforeach; ?>
   <?php endif; ?>

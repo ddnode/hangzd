@@ -1,7 +1,8 @@
 <?php
+
 // $Id: xb7.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'ddwim', 'ddwib', 'ddwibs', 'ddwis', 'ddwiss', 'ddwing', 'ddwij', 'ddwic', 'ddwik', 'ddwit', 'ddwip', 'ddwih', 'ddyu', 'ddyug', 'ddyugg', 'ddyugs',
   0x10 => 'ddyun', 'ddyunj', 'ddyunh', 'ddyud', 'ddyul', 'ddyulg', 'ddyulm', 'ddyulb', 'ddyuls', 'ddyult', 'ddyulp', 'ddyulh', 'ddyum', 'ddyub', 'ddyubs', 'ddyus',
   0x20 => 'ddyuss', 'ddyung', 'ddyuj', 'ddyuc', 'ddyuk', 'ddyut', 'ddyup', 'ddyuh', 'ddeu', 'ddeug', 'ddeugg', 'ddeugs', 'ddeun', 'ddeunj', 'ddeunh', 'ddeud',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'ryae', 'ryaeg', 'ryaegg', 'ryaegs', 'ryaen', 'ryaenj', 'ryaenh', 'ryaed', 'ryael', 'ryaelg', 'ryaelm', 'ryaelb', 'ryaels', 'ryaelt', 'ryaelp', 'ryaelh',
   0xE0 => 'ryaem', 'ryaeb', 'ryaebs', 'ryaes', 'ryaess', 'ryaeng', 'ryaej', 'ryaec', 'ryaek', 'ryaet', 'ryaep', 'ryaeh', 'reo', 'reog', 'reogg', 'reogs',
   0xF0 => 'reon', 'reonj', 'reonh', 'reod', 'reol', 'reolg', 'reolm', 'reolb', 'reols', 'reolt', 'reolp', 'reolh', 'reom', 'reob', 'reobs', 'reos',
-);
+];

@@ -28,43 +28,43 @@
 <?php
   // Add table javascript.
   drupal_add_js('misc/tableheader.js');
-  drupal_add_js(drupal_get_path('module', 'block') .'/block.js');
+  drupal_add_js(drupal_get_path('module', 'block').'/block.js');
   foreach ($block_regions as $region => $title) {
-    drupal_add_tabledrag('blocks', 'match', 'sibling', 'block-region-select', 'block-region-'. $region, NULL, FALSE);
-    drupal_add_tabledrag('blocks', 'order', 'sibling', 'block-weight', 'block-weight-'. $region);
+      drupal_add_tabledrag('blocks', 'match', 'sibling', 'block-region-select', 'block-region-'.$region, null, false);
+      drupal_add_tabledrag('blocks', 'order', 'sibling', 'block-weight', 'block-weight-'.$region);
   }
 ?>
 <table id="blocks" class="sticky-enabled">
   <thead>
     <tr>
-      <th><?php print t('Block'); ?></th>
-      <th><?php print t('Region'); ?></th>
-      <th><?php print t('Weight'); ?></th>
+      <th><?php echo t('Block'); ?></th>
+      <th><?php echo t('Region'); ?></th>
+      <th><?php echo t('Weight'); ?></th>
       <?php if ($throttle): ?>
-        <th><?php print t('Throttle'); ?></th>
+        <th><?php echo t('Throttle'); ?></th>
       <?php endif; ?>
-      <th colspan="2"><?php print t('Operations'); ?></th>
+      <th colspan="2"><?php echo t('Operations'); ?></th>
     </tr>
   </thead>
   <tbody>
     <?php $row = 0; ?>
     <?php foreach ($block_regions as $region => $title): ?>
-      <tr class="region region-<?php print $region?>">
-        <td colspan="<?php print $throttle ? '6' : '5'; ?>" class="region"><?php print $title; ?></td>
+      <tr class="region region-<?php echo $region?>">
+        <td colspan="<?php echo $throttle ? '6' : '5'; ?>" class="region"><?php echo $title; ?></td>
       </tr>
-      <tr class="region-message region-<?php print $region?>-message <?php print empty($block_listing[$region]) ? 'region-empty' : 'region-populated'; ?>">
-        <td colspan="<?php print $throttle ? '6' : '5'; ?>"><em><?php print t('No blocks in this region'); ?></em></td>
+      <tr class="region-message region-<?php echo $region?>-message <?php echo empty($block_listing[$region]) ? 'region-empty' : 'region-populated'; ?>">
+        <td colspan="<?php echo $throttle ? '6' : '5'; ?>"><em><?php echo t('No blocks in this region'); ?></em></td>
       </tr>
       <?php foreach ($block_listing[$region] as $delta => $data): ?>
-      <tr class="draggable <?php print $row % 2 == 0 ? 'odd' : 'even'; ?><?php print $data->row_class ? ' '. $data->row_class : ''; ?>">
-        <td class="block"><?php print $data->block_title; ?></td>
-        <td><?php print $data->region_select; ?></td>
-        <td><?php print $data->weight_select; ?></td>
+      <tr class="draggable <?php echo $row % 2 == 0 ? 'odd' : 'even'; ?><?php echo $data->row_class ? ' '.$data->row_class : ''; ?>">
+        <td class="block"><?php echo $data->block_title; ?></td>
+        <td><?php echo $data->region_select; ?></td>
+        <td><?php echo $data->weight_select; ?></td>
         <?php if ($throttle): ?>
-          <td><?php print $data->throttle_check; ?></td>
+          <td><?php echo $data->throttle_check; ?></td>
         <?php endif; ?>
-        <td><?php print $data->configure_link; ?></td>
-        <td><?php print $data->delete_link; ?></td>
+        <td><?php echo $data->configure_link; ?></td>
+        <td><?php echo $data->delete_link; ?></td>
       </tr>
       <?php $row++; ?>
       <?php endforeach; ?>
@@ -72,4 +72,4 @@
   </tbody>
 </table>
 
-<?php print $form_submit; ?>
+<?php echo $form_submit; ?>

@@ -1,7 +1,8 @@
 <?php
+
 // $Id: xa0.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'it', 'ix', 'i', 'ip', 'iet', 'iex', 'ie', 'iep', 'at', 'ax', 'a', 'ap', 'uox', 'uo', 'uop', 'ot',
   0x10 => 'ox', 'o', 'op', 'ex', 'e', 'wu', 'bit', 'bix', 'bi', 'bip', 'biet', 'biex', 'bie', 'biep', 'bat', 'bax',
   0x20 => 'ba', 'bap', 'buox', 'buo', 'buop', 'bot', 'box', 'bo', 'bop', 'bex', 'be', 'bep', 'but', 'bux', 'bu', 'bup',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'fip', 'fat', 'fax', 'fa', 'fap', 'fox', 'fo', 'fop', 'fut', 'fux', 'fu', 'fup', 'furx', 'fur', 'fyt', 'fyx',
   0xE0 => 'fy', 'fyp', 'vit', 'vix', 'vi', 'vip', 'viet', 'viex', 'vie', 'viep', 'vat', 'vax', 'va', 'vap', 'vot', 'vox',
   0xF0 => 'vo', 'vop', 'vex', 'vep', 'vut', 'vux', 'vu', 'vup', 'vurx', 'vur', 'vyt', 'vyx', 'vy', 'vyp', 'vyrx', 'vyr',
-);
+];

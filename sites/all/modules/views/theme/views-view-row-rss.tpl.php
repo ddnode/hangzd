@@ -7,8 +7,8 @@
  */
 ?>
   <item>
-    <title><?php print $title; ?></title>
-    <link><?php print $link; ?></link>
-    <description><?php print $description; ?></description>
-    <?php print $item_elements; ?>
+    <title><?php echo $title; ?></title>
+    <link><?php echo $link; ?></link>
+    <description><?php echo $description; ?></description>
+    <?php echo $item_elements; ?>
   </item>

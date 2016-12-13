@@ -1,7 +1,8 @@
 <?php
+
 // $Id: xbc.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'mil', 'milg', 'milm', 'milb', 'mils', 'milt', 'milp', 'milh', 'mim', 'mib', 'mibs', 'mis', 'miss', 'ming', 'mij', 'mic',
   0x10 => 'mik', 'mit', 'mip', 'mih', 'ba', 'bag', 'bagg', 'bags', 'ban', 'banj', 'banh', 'bad', 'bal', 'balg', 'balm', 'balb',
   0x20 => 'bals', 'balt', 'balp', 'balh', 'bam', 'bab', 'babs', 'bas', 'bass', 'bang', 'baj', 'bac', 'bak', 'bat', 'bap', 'bah',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'byeoss', 'byeong', 'byeoj', 'byeoc', 'byeok', 'byeot', 'byeop', 'byeoh', 'bye', 'byeg', 'byegg', 'byegs', 'byen', 'byenj', 'byenh', 'byed',
   0xE0 => 'byel', 'byelg', 'byelm', 'byelb', 'byels', 'byelt', 'byelp', 'byelh', 'byem', 'byeb', 'byebs', 'byes', 'byess', 'byeng', 'byej', 'byec',
   0xF0 => 'byek', 'byet', 'byep', 'byeh', 'bo', 'bog', 'bogg', 'bogs', 'bon', 'bonj', 'bonh', 'bod', 'bol', 'bolg', 'bolm', 'bolb',
-);
+];

@@ -45,13 +45,13 @@
  * @see template_preprocess_search_result()
  */
 ?>
-<div class="search-result <?php print $search_zebra; ?>">
+<div class="search-result <?php echo $search_zebra; ?>">
   <dt class="title">
-    <a href="<?php print $url; ?>"><?php print $title; ?></a>
+    <a href="<?php echo $url; ?>"><?php echo $title; ?></a>
   </dt>
   <dd>
     <?php if ($snippet) : ?>
-    <p class="search-snippet"><?php print $snippet; ?></p>
+    <p class="search-snippet"><?php echo $snippet; ?></p>
     <?php endif; ?>
     
     <?php if ($info_split) : ?>
@@ -59,27 +59,27 @@
       <?php $info_separator = ''; ?>
       
       <?php if (isset($info_split['type'])) : ?>
-      <span class="search-info-type"><?php print $info_split['type']; ?></span>
+      <span class="search-info-type"><?php echo $info_split['type']; ?></span>
         <?php $info_separator = ' - '; ?>
       <?php endif; ?>
         
       <?php if (isset($info_split['user'])) : ?>
-      <span class="search-info-user"><?php print $info_separator . $info_split['user']; ?></span>
+      <span class="search-info-user"><?php echo $info_separator.$info_split['user']; ?></span>
         <?php $info_separator = ' - '; ?>
       <?php endif; ?>
         
       <?php if (isset($info_split['date'])) : ?>
-      <span class="search-info-date"><?php print $info_separator . $info_split['date']; ?></span>
+      <span class="search-info-date"><?php echo $info_separator.$info_split['date']; ?></span>
         <?php $info_separator = ' - '; ?>
       <?php endif; ?>
         
       <?php if (isset($info_split['comment'])) : ?>
-      <span class="search-info-comment"><?php print $info_separator . $info_split['comment']; ?></span>
+      <span class="search-info-comment"><?php echo $info_separator.$info_split['comment']; ?></span>
         <?php $info_separator = ' - '; ?>
       <?php endif; ?>
       
       <?php if (isset($info_split['upload'])) : ?>
-      <span class="search-info-upload"><?php print $info_separator . $info_split['upload']; ?></span>
+      <span class="search-info-upload"><?php echo $info_separator.$info_split['upload']; ?></span>
       <?php endif; ?>
     </p>
     <?php endif; ?>

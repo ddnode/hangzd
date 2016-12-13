@@ -1,35 +1,35 @@
 <?php
 ?>
 
-<div id="node-<?php print $node->nid; ?>" class="node <?php print $node_classes; ?>">
+<div id="node-<?php echo $node->nid; ?>" class="node <?php echo $node_classes; ?>">
   <div class="inner">
-    <?php print $picture ?>
+    <?php echo $picture ?>
 
     <?php if ($page == 0): ?>
-    <h2 class="title"><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
+    <h2 class="title"><a href="<?php echo $node_url ?>" title="<?php echo $title ?>"><?php echo $title ?></a></h2>
     <?php endif; ?>
 
     <?php if ($submitted): ?>
     <div class="meta">
-      <span class="submitted"><?php print $submitted ?></span>
+      <span class="submitted"><?php echo $submitted ?></span>
     </div>
     <?php endif; ?>
 
     <div class="content clearfix">
-      <?php print $content ?>
+      <?php echo $content ?>
     </div>
 
     <?php if ($terms): ?>
     <div class="terms">
-      <?php print $terms; ?>
+      <?php echo $terms; ?>
     </div>
-    <?php endif;?>
+    <?php endif; ?>
 
     <?php if ($links): ?>
     <div class="links">
-      <?php print $links; ?>
+      <?php echo $links; ?>
     </div>
     <?php endif; ?>
   </div><!-- /inner -->
 
-</div><!-- /node-<?php print $node->nid; ?> -->
+</div><!-- /node-<?php echo $node->nid; ?> -->

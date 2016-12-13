@@ -1,7 +1,8 @@
 <?php
+
 // $Id: xbf.php,v 1.3 2009/06/09 19:07:06 smk Exp $
 
-$base = array(
+$base = [
   0x00 => 'bbess', 'bbeng', 'bbej', 'bbec', 'bbek', 'bbet', 'bbep', 'bbeh', 'bbyeo', 'bbyeog', 'bbyeogg', 'bbyeogs', 'bbyeon', 'bbyeonj', 'bbyeonh', 'bbyeod',
   0x10 => 'bbyeol', 'bbyeolg', 'bbyeolm', 'bbyeolb', 'bbyeols', 'bbyeolt', 'bbyeolp', 'bbyeolh', 'bbyeom', 'bbyeob', 'bbyeobs', 'bbyeos', 'bbyeoss', 'bbyeong', 'bbyeoj', 'bbyeoc',
   0x20 => 'bbyeok', 'bbyeot', 'bbyeop', 'bbyeoh', 'bbye', 'bbyeg', 'bbyegg', 'bbyegs', 'bbyen', 'bbyenj', 'bbyenh', 'bbyed', 'bbyel', 'bbyelg', 'bbyelm', 'bbyelb',
@@ -18,4 +19,4 @@ $base = array(
   0xD0 => 'bbun', 'bbunj', 'bbunh', 'bbud', 'bbul', 'bbulg', 'bbulm', 'bbulb', 'bbuls', 'bbult', 'bbulp', 'bbulh', 'bbum', 'bbub', 'bbubs', 'bbus',
   0xE0 => 'bbuss', 'bbung', 'bbuj', 'bbuc', 'bbuk', 'bbut', 'bbup', 'bbuh', 'bbweo', 'bbweog', 'bbweogg', 'bbweogs', 'bbweon', 'bbweonj', 'bbweonh', 'bbweod',
   0xF0 => 'bbweol', 'bbweolg', 'bbweolm', 'bbweolb', 'bbweols', 'bbweolt', 'bbweolp', 'bbweolh', 'bbweom', 'bbweob', 'bbweobs', 'bbweos', 'bbweoss', 'bbweong', 'bbweoj', 'bbweoc',
-);
+];

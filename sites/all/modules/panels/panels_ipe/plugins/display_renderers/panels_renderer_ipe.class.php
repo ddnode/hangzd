@@ -3,48 +3,52 @@
 /**
  * Renderer class for all In-Place Editor (IPE) behavior.
  */
-class panels_renderer_ipe extends panels_renderer_editor {
-  // The IPE operates in normal render mode, not admin mode.
-  var $admin = FALSE;
+class panels_renderer_ipe extends panels_renderer_editor
+{
+    // The IPE operates in normal render mode, not admin mode.
+  public $admin = false;
 
-  function render() {
-    $output = parent::render();
-    return "<div id='panels-ipe-display-{$this->clean_key}' class='panels-ipe-display-container'>$output</div>";
-  }
+    public function render()
+    {
+        $output = parent::render();
 
-  function add_meta() {
-    ctools_include('display-edit', 'panels');
-    ctools_include('content');
-
-    if (empty($this->display->cache_key)) {
-      $this->cache = panels_edit_cache_get_default($this->display);
+        return "<div id='panels-ipe-display-{$this->clean_key}' class='panels-ipe-display-container'>$output</div>";
     }
+
+    public function add_meta()
+    {
+        ctools_include('display-edit', 'panels');
+        ctools_include('content');
+
+        if (empty($this->display->cache_key)) {
+            $this->cache = panels_edit_cache_get_default($this->display);
+        }
     // @todo we may need an else to load the cache, but I am not sure we
     // actually need to load it if we already have our cache key, and doing
     // so is a waste of resources.
 
     ctools_include('cleanstring');
-    $this->clean_key = ctools_cleanstring($this->display->cache_key);
-    panels_ipe_get_cache_key($this->clean_key);
+        $this->clean_key = ctools_cleanstring($this->display->cache_key);
+        panels_ipe_get_cache_key($this->clean_key);
 
-    ctools_include('ajax');
-    ctools_include('modal');
-    ctools_modal_add_js();
+        ctools_include('ajax');
+        ctools_include('modal');
+        ctools_modal_add_js();
 
-    ctools_add_css('panels_dnd', 'panels');
-    ctools_add_css('panels_admin', 'panels');
-    ctools_add_js('panels_ipe', 'panels_ipe');
-    ctools_add_css('panels_ipe', 'panels_ipe');
+        ctools_add_css('panels_dnd', 'panels');
+        ctools_add_css('panels_admin', 'panels');
+        ctools_add_js('panels_ipe', 'panels_ipe');
+        ctools_add_css('panels_ipe', 'panels_ipe');
 
-    $settings = array(
+        $settings = [
       'formPath' => url($this->get_url('save-form')),
-    );
-    drupal_add_js(array('PanelsIPECacheKeys' => array($this->clean_key)), 'setting');
-    drupal_add_js(array('PanelsIPESettings' => array($this->clean_key => $settings)), 'setting');
+    ];
+        drupal_add_js(['PanelsIPECacheKeys' => [$this->clean_key]], 'setting');
+        drupal_add_js(['PanelsIPESettings' => [$this->clean_key => $settings]], 'setting');
 
-    jquery_ui_add(array('ui.draggable', 'ui.droppable', 'ui.sortable'));
-    parent::add_meta();
-  }
+        jquery_ui_add(['ui.draggable', 'ui.droppable', 'ui.sortable']);
+        parent::add_meta();
+    }
 
   /**
    * Override & call the parent, then pass output through to the dnd wrapper
@@ -52,39 +56,41 @@ class panels_renderer_ipe extends panels_renderer_editor {
    *
    * @param $pane
    */
-  function render_pane(&$pane) {
-    $output = parent::render_pane($pane);
-    if (empty($output)) {
-      return;
-    }
+  public function render_pane(&$pane)
+  {
+      $output = parent::render_pane($pane);
+      if (empty($output)) {
+          return;
+      }
 
-    if (empty($pane->IPE_empty)) {
-      // Add an inner layer wrapper to the pane content before placing it into
+      if (empty($pane->IPE_empty)) {
+          // Add an inner layer wrapper to the pane content before placing it into
       // draggable portlet
       $output = "<div class=\"panels-ipe-portlet-content\">$output</div>";
-    }
-    else {
-      $output = "<div class=\"panels-ipe-portlet-content panels-ipe-empty-pane\">$output</div>";
-    }
+      } else {
+          $output = "<div class=\"panels-ipe-portlet-content panels-ipe-empty-pane\">$output</div>";
+      }
     // Hand it off to the plugin/theme for placing draggers/buttons
     $output = theme('panels_ipe_pane_wrapper', $output, $pane, $this->display, $this);
-    return "<div id=\"panels-ipe-paneid-{$pane->pid}\" class=\"panels-ipe-portlet-wrapper panels-ipe-portlet-marker\">" . $output . "</div>";
+
+      return "<div id=\"panels-ipe-paneid-{$pane->pid}\" class=\"panels-ipe-portlet-wrapper panels-ipe-portlet-marker\">".$output.'</div>';
   }
 
-  function render_pane_content(&$pane) {
-    $content = parent::render_pane_content($pane);
+    public function render_pane_content(&$pane)
+    {
+        $content = parent::render_pane_content($pane);
     // Ensure that empty panes have some content.
     if (empty($content->content)) {
-      // Get the administrative title.
+        // Get the administrative title.
       $content_type = ctools_get_content_type($pane->type);
-      $title = ctools_content_admin_title($content_type, $pane->subtype, $pane->configuration, $this->display->context);
+        $title = ctools_content_admin_title($content_type, $pane->subtype, $pane->configuration, $this->display->context);
 
-      $content->content = t('Placeholder for empty "@title"', array('@title' => $title));
-      $pane->IPE_empty = TRUE;
+        $content->content = t('Placeholder for empty "@title"', ['@title' => $title]);
+        $pane->IPE_empty = true;
     }
 
-    return $content;
-  }
+        return $content;
+    }
 
   /**
    * Add an 'empty' pane placeholder above all the normal panes.
@@ -92,162 +98,168 @@ class panels_renderer_ipe extends panels_renderer_editor {
    * @param $region_id
    * @param $panes
    */
-  function render_region($region_id, $panes) {
-    // Generate this region's 'empty' placeholder pane from the IPE plugin.
+  public function render_region($region_id, $panes)
+  {
+      // Generate this region's 'empty' placeholder pane from the IPE plugin.
     $empty_ph = theme('panels_ipe_placeholder_pane', $region_id, $this->plugins['layout']['panels'][$region_id]);
 
     // Wrap the placeholder in some guaranteed markup.
-    $panes['empty_placeholder'] = '<div class="panels-ipe-placeholder panels-ipe-on panels-ipe-portlet-marker panels-ipe-portlet-static">' . $empty_ph . "</div>";
+    $panes['empty_placeholder'] = '<div class="panels-ipe-placeholder panels-ipe-on panels-ipe-portlet-marker panels-ipe-portlet-static">'.$empty_ph.'</div>';
 
     // Generate this region's add new pane button. FIXME waaaaay too hardcoded
     $panes['add_button'] = theme('panels_ipe_add_pane_button', $region_id, $this->display, $this);
 
-    $output = parent::render_region($region_id, $panes);
-    $output = theme('panels_ipe_region_wrapper', $output, $region_id, $this->display);
-    $classes = 'panels-ipe-region';
+      $output = parent::render_region($region_id, $panes);
+      $output = theme('panels_ipe_region_wrapper', $output, $region_id, $this->display);
+      $classes = 'panels-ipe-region';
 
-    ctools_include('cleanstring');
-    $region_id = ctools_cleanstring($region_id);
-    return "<div id='panels-ipe-regionid-$region_id' class='panels-ipe-region'>$output</div>";
+      ctools_include('cleanstring');
+      $region_id = ctools_cleanstring($region_id);
+
+      return "<div id='panels-ipe-regionid-$region_id' class='panels-ipe-region'>$output</div>";
   }
 
   /**
    * AJAX entry point to create the controller form for an IPE.
    */
-  function ajax_save_form($break = NULL) {
-    ctools_include('form');
-    if (!empty($this->cache->locked)) {
-      if ($break != 'break') {
-        $account  = user_load($this->cache->locked->uid);
-        $name     = theme('username', $account);
-        $lock_age = format_interval(time() - $this->cache->locked->updated);
+  public function ajax_save_form($break = null)
+  {
+      ctools_include('form');
+      if (!empty($this->cache->locked)) {
+          if ($break != 'break') {
+              $account = user_load($this->cache->locked->uid);
+              $name = theme('username', $account);
+              $lock_age = format_interval(time() - $this->cache->locked->updated);
 
-        $message = t("This panel is being edited by user !user, and is therefore locked from editing by others. This lock is !age old.\n\nClick OK to break this lock and discard any changes made by !user.", array('!user' => $name, '!age' => $lock_age));
+              $message = t("This panel is being edited by user !user, and is therefore locked from editing by others. This lock is !age old.\n\nClick OK to break this lock and discard any changes made by !user.", ['!user' => $name, '!age' => $lock_age]);
 
-        $this->commands[] = array(
-          'command' => 'unlockIPE',
-          'message' => $message,
-          'break_path' => url($this->get_url('save-form', 'break'))
-        );
-        return;
-      }
+              $this->commands[] = [
+          'command'    => 'unlockIPE',
+          'message'    => $message,
+          'break_path' => url($this->get_url('save-form', 'break')),
+        ];
+
+              return;
+          }
 
       // Break the lock.
       panels_edit_cache_break_lock($this->cache);
-    }
+      }
 
-    $form_state = array(
-      'display' => &$this->display,
+      $form_state = [
+      'display'       => &$this->display,
       'content_types' => $this->cache->content_types,
-      'rerender' => FALSE,
-      'no_redirect' => TRUE,
+      'rerender'      => false,
+      'no_redirect'   => true,
       // Panels needs this to make sure that the layout gets callbacks
       'layout' => $this->plugins['layout'],
-    );
+    ];
 
-    $output = ctools_build_form('panels_ipe_edit_control_form', $form_state);
-    if ($output) {
-      // At this point, we want to save the cache to ensure that we have a lock.
+      $output = ctools_build_form('panels_ipe_edit_control_form', $form_state);
+      if ($output) {
+          // At this point, we want to save the cache to ensure that we have a lock.
       panels_edit_cache_set($this->cache);
-      $this->commands[] = array(
+          $this->commands[] = [
         'command' => 'initIPE',
-        'key' => $this->clean_key,
-        'data' => $output,
-      );
-      return;
-    }
+        'key'     => $this->clean_key,
+        'data'    => $output,
+      ];
+
+          return;
+      }
 
     // no output == submit
     if (!empty($form_state['clicked_button']['#save-display'])) {
-      // Saved. Save the cache.
+        // Saved. Save the cache.
       panels_edit_cache_save($this->cache);
-    }
-    else {
-      // Cancelled. Clear the cache.
+    } else {
+        // Cancelled. Clear the cache.
       panels_edit_cache_clear($this->cache);
     }
 
-    $this->commands[] = array(
+      $this->commands[] = [
       'command' => 'endIPE',
-      'key' => $this->clean_key,
-      'data' => $output,
-    );
+      'key'     => $this->clean_key,
+      'data'    => $output,
+    ];
   }
 
   /**
    * Create a command array to redraw a pane.
    */
-  function command_update_pane($pid) {
-    if (is_object($pid)) {
-      $pane = $pid;
-    }
-    else {
-      $pane = $this->display->content[$pid];
-    }
+  public function command_update_pane($pid)
+  {
+      if (is_object($pid)) {
+          $pane = $pid;
+      } else {
+          $pane = $this->display->content[$pid];
+      }
 
-    $this->commands[] = ctools_ajax_command_replace("#panels-ipe-paneid-$pane->pid", $this->render_pane($pane));
-    $this->commands[] = ctools_ajax_command_changed("#panels-ipe-display-{$this->clean_key}");
+      $this->commands[] = ctools_ajax_command_replace("#panels-ipe-paneid-$pane->pid", $this->render_pane($pane));
+      $this->commands[] = ctools_ajax_command_changed("#panels-ipe-display-{$this->clean_key}");
   }
 
   /**
    * Create a command array to add a new pane.
    */
-  function command_add_pane($pid) {
-    if (is_object($pid)) {
-      $pane = $pid;
-    }
-    else {
-      $pane = $this->display->content[$pid];
-    }
+  public function command_add_pane($pid)
+  {
+      if (is_object($pid)) {
+          $pane = $pid;
+      } else {
+          $pane = $this->display->content[$pid];
+      }
 
-    ctools_include('cleanstring');
-    $region_id = ctools_cleanstring($pane->panel);
-    $this->commands[] = ctools_ajax_command_append("#panels-ipe-regionid-$region_id div.panels-ipe-sort-container", $this->render_pane($pane));
-    $this->commands[] = ctools_ajax_command_changed("#panels-ipe-display-{$this->clean_key}");
+      ctools_include('cleanstring');
+      $region_id = ctools_cleanstring($pane->panel);
+      $this->commands[] = ctools_ajax_command_append("#panels-ipe-regionid-$region_id div.panels-ipe-sort-container", $this->render_pane($pane));
+      $this->commands[] = ctools_ajax_command_changed("#panels-ipe-display-{$this->clean_key}");
   }
 }
 
 /**
  * FAPI callback to create the Save/Cancel form for the IPE.
  */
-function panels_ipe_edit_control_form(&$form_state) {
-  $display = &$form_state['display'];
+function panels_ipe_edit_control_form(&$form_state)
+{
+    $display = &$form_state['display'];
   // @todo -- this should be unnecessary as we ensure cache_key is set in add_meta()
 //  $display->cache_key = isset($display->cache_key) ? $display->cache_key : $display->did;
 
   // Annoyingly, theme doesn't have access to form_state so we have to do this.
   $form['#display'] = $display;
 
-  $layout = panels_get_layout($display->layout);
-  $layout_panels = panels_get_regions($layout, $display);
+    $layout = panels_get_layout($display->layout);
+    $layout_panels = panels_get_regions($layout, $display);
 
-  $form['panel'] = array('#tree' => TRUE);
-  $form['panel']['pane'] = array('#tree' => TRUE);
+    $form['panel'] = ['#tree' => true];
+    $form['panel']['pane'] = ['#tree' => true];
 
-  foreach ($layout_panels as $panel_id => $title) {
-    // Make sure we at least have an empty array for all possible locations.
+    foreach ($layout_panels as $panel_id => $title) {
+        // Make sure we at least have an empty array for all possible locations.
     if (!isset($display->panels[$panel_id])) {
-      $display->panels[$panel_id] = array();
+        $display->panels[$panel_id] = [];
     }
 
-    $form['panel']['pane'][$panel_id] = array(
+        $form['panel']['pane'][$panel_id] = [
       // Use 'hidden' instead of 'value' so the js can access it.
-      '#type' => 'hidden',
+      '#type'          => 'hidden',
       '#default_value' => implode(',', (array) $display->panels[$panel_id]),
-    );
-  }
+    ];
+    }
 
-  $form['buttons']['submit'] = array(
-    '#type' => 'submit',
-    '#value' => t('Save'),
-    '#id' => 'panels-ipe-save',
-    '#submit' => array('panels_edit_display_form_submit'),
-    '#save-display' => TRUE,
-  );
-  $form['buttons']['cancel'] = array(
-    '#type' => 'submit',
+    $form['buttons']['submit'] = [
+    '#type'         => 'submit',
+    '#value'        => t('Save'),
+    '#id'           => 'panels-ipe-save',
+    '#submit'       => ['panels_edit_display_form_submit'],
+    '#save-display' => true,
+  ];
+    $form['buttons']['cancel'] = [
+    '#type'  => 'submit',
     '#value' => t('Cancel'),
-    '#id' => 'panels-ipe-cancel',
-  );
-  return $form;
+    '#id'    => 'panels-ipe-cancel',
+  ];
+
+    return $form;
 }

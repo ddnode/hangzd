@@ -14,7 +14,7 @@
  * @ingroup views_templates
  */
 ?>
-<?php print $node; ?>
+<?php echo $node; ?>
 <?php if ($comments): ?>
-  <?php print $comments; ?>
+  <?php echo $comments; ?>
 <?php endif; ?>

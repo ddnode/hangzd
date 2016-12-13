@@ -17,11 +17,11 @@
  */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language->language; ?>" xml:lang="<?php print $language->language; ?>">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo $language->language; ?>" xml:lang="<?php echo $language->language; ?>">
   <head>
-    <?php print $head; ?>
-    <title><?php print $title; ?></title>
-    <base href="<?php print $base_url; ?>" />
+    <?php echo $head; ?>
+    <title><?php echo $title; ?></title>
+    <base href="<?php echo $base_url; ?>" />
     <link type="text/css" rel="stylesheet" href="misc/print.css" />
     <?php if ($language_rtl): ?>
       <link type="text/css" rel="stylesheet" href="misc/print-rtl.css" />
@@ -41,12 +41,12 @@
     $div_close = '';
     ?>
     <?php for ($i = 1; $i < $depth; $i++) : ?>
-      <div class="section-<?php print $i; ?>">
+      <div class="section-<?php echo $i; ?>">
       <?php $div_close .= '</div>'; ?>
     <?php endfor; ?>
 
-    <?php print $contents; ?>
-    <?php print $div_close; ?>
+    <?php echo $contents; ?>
+    <?php echo $div_close; ?>
 
   </body>
 </html>
